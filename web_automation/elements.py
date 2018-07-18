@@ -22,6 +22,22 @@ class Element(ABC):
     def location(self) -> Dict[Any, Any]:
         pass
 
+    @abstractmethod
+    def clear(self) -> None:
+        pass
+
+    @abstractmethod
+    def send_keys(self, value: str) -> None:
+        pass
+
+    @abstractmethod
+    def tag_name(self) -> str:
+        pass
+
+    @abstractmethod
+    def click(self) -> None:
+        pass
+
 
 class WebElement(Element):
     """Represent concrete web element."""
@@ -40,3 +56,15 @@ class WebElement(Element):
 
     def location(self) -> Dict[Any, Any]:
         return self._element.location
+
+    def clear(self) -> None:
+        self._element.clear()
+
+    def send_keys(self, value: str) -> None:
+        self._element.send_keys(value)
+
+    def tag_name(self) -> str:
+        return self._element.tag_name
+
+    def click(self) -> None:
+        self._element.click()
