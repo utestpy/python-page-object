@@ -2,9 +2,10 @@ from abc import ABC, abstractmethod
 from functools import lru_cache
 from typing import Callable
 from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webelement import WebElement
+from web_automation.elements import Element
 from web_automation.locators import HomePage as HP_Locators
-from web_automation.drivers import Driver, ChromeBrowser, WebBrowserDriver
+from web_automation.drivers import Driver, WebBrowserDriver
+from web_automation.browsers import ChromeBrowser
 
 
 class WebPage(ABC):
@@ -25,16 +26,12 @@ class BasePage(WebPage):
             return WebBrowserDriver(ChromeBrowser()).get(url)
 
         self._url: str = url
-        self._driver: Callable[..., Driver] = open_page
+        self.driver: Callable[..., Driver] = open_page
 
-    @property
-    def driver(self) -> Driver:
-        return self._driver()
-
-    def open_page(self, url: str = None) -> None:
+    def open_page(self, url: str = None) -> Driver:
         if not url:
             url: str = self._url
-        return self.driver.get(url)
+        return self.driver().get(url)
 
 
 class HomePage(WebPage):
@@ -47,8 +44,8 @@ class HomePage(WebPage):
     def open_page(self, url: str = None) -> None:
         self._page.open_page(url)
 
-    def get_logo(self) -> WebElement:
-        return self._page.driver.find_element(By.XPATH, self._hp_locators.logo)
+    def logo(self) -> Element:
+        return self._page.driver().find_element(By.XPATH, self._hp_locators.logo)
 
-    def get_contact(self) -> WebElement:
-        return self._page.driver.find_element(By.XPATH, self._hp_locators.contact)
+    def contact(self) -> Element:
+        return self._page.driver().find_element(By.XPATH, self._hp_locators.contact)
