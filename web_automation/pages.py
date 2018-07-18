@@ -4,7 +4,7 @@ from typing import Callable
 from selenium.webdriver.common.by import By
 from web_automation.elements import Element
 from web_automation.locators import HomePage as HP_Locators
-from web_automation.drivers import Driver, WebBrowserDriver
+from web_automation.drivers import Driver, WebDriverOf
 from web_automation.browsers import ChromeBrowser
 
 
@@ -23,7 +23,7 @@ class BasePage(WebPage):
 
         @lru_cache(typed=True)
         def open_page() -> Driver:
-            return WebBrowserDriver(ChromeBrowser()).get(url)
+            return WebDriverOf(ChromeBrowser()).get(url)
 
         self._url: str = url
         self.driver: Callable[..., Driver] = open_page
