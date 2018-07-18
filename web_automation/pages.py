@@ -49,3 +49,12 @@ class HomePage(WebPage):
 
     def contact(self) -> Element:
         return self._page.driver().find_element(By.XPATH, self._hp_locators.contact)
+
+    def sign_on(self) -> Element:
+        return self._page.driver().find_element(By.XPATH, self._hp_locators.sing_on)
+
+    def support(self) -> Element:
+        return self._page.driver().find_element(By.XPATH, self._hp_locators.support)
+
+    def register(self) -> Element:
+        return self._page.driver().find_element(By.XPATH, self._hp_locators.register)
