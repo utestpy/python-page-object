@@ -52,3 +52,4 @@ class SafariBrowser(WebBrowser):
 
     def name(self) -> str:
         return 'Safari'
+

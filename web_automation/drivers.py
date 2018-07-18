@@ -9,7 +9,7 @@ class Driver(ABC):
     """Abstraction of a web driver."""
 
     @abstractmethod
-    def get(self, url: str) -> 'Driver':
+    def get(self, url: str) -> None:
         pass
 
     @abstractmethod
@@ -42,9 +42,8 @@ class WebDriverOf(Driver):
     def find_element(self, by: str, locator: str) -> Element:
         return WebElement(self._driver().find_element(by, locator))
 
-    def get(self, url: str) -> Driver:
+    def get(self, url: str) -> None:
         self._driver().get(url)
-        return self
 
     def set_page_load_timeout(self, time_to_wait: int) -> None:
         self._driver().set_page_load_timeout(time_to_wait)
