@@ -21,12 +21,7 @@ class RegistrationPage(object):
     password: str = "//input[@name='password']"
     confirm_password: str = "//input[@name='confirmPassword']"
     submit: str = "//input[@name='register']"
-
-
-class PostRegistrationPage(object):
-    """Represent post registration page web element locators."""
-
-    thank_you: str = "//*[contains(text(), 'Thank you for registrating')]"
+    thank_you: str = "//*[contains(text(), 'Thank you for registering')]"
     post_user: str = "//*[contains(text(), 'Your user name is')]"
 
 

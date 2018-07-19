@@ -2,11 +2,18 @@ from abc import ABC, abstractmethod
 from functools import lru_cache
 from typing import Callable
 from selenium.webdriver.support.select import Select
+# from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
 from web_automation.elements import Element
 from web_automation.handlers import HandlerBy, WebHandlerBy
-from web_automation.locators import HomePage as HP_Locators, RegistrationPage as RP_Locators
+from web_automation.locators import (HomePage as HP_Locators,
+                                     RegistrationPage as RP_Locators,
+                                     SingOnPage as SP_Locators)
 from web_automation.drivers import Driver, WebDriverOf
 from web_automation.browsers import ChromeBrowser
+from web_automation.waits import WebDriverWaitOf
 
 
 class WebPage(ABC):
@@ -30,6 +37,10 @@ class BasePage(WebPage):
 
         self._url: str = url
         self.driver: Callable[..., Driver] = open_page
+
+    # def element_presented(self, by: HandlerBy, element: str) -> None:
+    #     return WebDriverWait(self.driver(), 10).until(
+    #         Expected_Cond.presence_of_element_located((by.xpath(), element)))
 
     def open_page(self, url: str = None) -> Driver:
         if not url:
@@ -121,3 +132,17 @@ class RegisterPage(WebPage):
 
     def submit(self) -> None:
         self._page.driver().find_element(self._by.xpath(), self._rp_locators.submit).click()
+
+    def confirm_registration(self) -> Element:
+        return WebDriverWaitOf(self._page.driver()).until(
+            expected_conditions.presence_of_element_located((self._by.xpath(),
+                                                             RP_Locators.thank_you)))
+
+
+# reg = RegisterPage()
+# print(reg.set_last_name('Volo'))
+# print(reg.set_first_name('Yah'))
+# print(reg.set_email('vyahello@gmai.com'))
+# print(reg.set_password('sekret'))
+# print(reg.submit())
+# print(reg.confirm_registration())
