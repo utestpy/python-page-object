@@ -11,8 +11,7 @@ from web_automation.locators import (
     RegistrationPage as RP_Locators,
     SingOnPage as SP_Locators
 )
-from web_automation.drivers import Driver, WebDriverOf
-from web_automation.browsers import ChromeBrowser
+from web_automation.drivers import Driver
 from web_automation.urls import Url, HomePageUrl, RegisterPageUrl, SignOnPageUrl
 from web_automation.waits import WebDriverWaitOf
 
@@ -21,7 +20,11 @@ class WebPage(ABC):
     """Abstraction of a web page."""
 
     @abstractmethod
-    def open(self, url: str = None) -> Driver:
+    def driver(self) -> Driver:
+        pass
+
+    @abstractmethod
+    def open(self, url: str = None) -> None:
         pass
 
     @abstractmethod
@@ -32,37 +35,41 @@ class WebPage(ABC):
 class BasePage(WebPage):
     """Represent base page."""
 
-    def __init__(self, url: Url) -> None:
+    def __init__(self, driver: Driver, url: Url) -> None:
 
         @lru_cache(typed=True)
         def _driver() -> Driver:
-            driver: Driver = WebDriverOf(ChromeBrowser())
             driver.get(url.get())
             return driver
 
         self._url: str = url
-        self.driver: Callable[..., Driver] = _driver
+        self._driver: Callable[..., Driver] = _driver
 
-    def open(self, url: str = None) -> Driver:
+    def driver(self) -> Driver:
+        return self._driver()
+
+    def open(self, url: str = None) -> None:
         if not url:
             url: str = self._url
-        self.driver().get(url)
-        return self.driver()
+        self._driver().get(url)
 
     def close(self) -> None:
-        return self.driver().close()
+        self._driver().close()
 
 
 class HomePage(WebPage):
     """Represent home page."""
 
-    def __init__(self) -> None:
+    def __init__(self, driver: Driver) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._hp_locators: HP_Locators = HP_Locators
-        self._page: WebPage = BasePage(HomePageUrl())
+        self._page: WebPage = BasePage(driver, HomePageUrl())
 
-    def open(self, url: str = None) -> Driver:
-        return self._page.open_page(url)
+    def driver(self) -> None:
+        self._page.driver()
+
+    def open(self, url: str = None) -> None:
+        self._page.open(url)
 
     def close(self) -> None:
         self._page.close()
@@ -86,13 +93,16 @@ class HomePage(WebPage):
 class RegisterPage(WebPage):
     """Represent register page."""
 
-    def __init__(self) -> None:
+    def __init__(self, driver: Driver) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._rp_locators: RP_Locators = RP_Locators
-        self._page: WebPage = BasePage(RegisterPageUrl())
+        self._page: WebPage = BasePage(driver, RegisterPageUrl())
 
-    def open(self, url: str = None) -> Driver:
-        return self._page.open(url)
+    def driver(self) -> None:
+        self._page.driver()
+
+    def open(self, url: str = None) -> None:
+        self._page.open(url)
 
     def close(self) -> None:
         self._page.close()
@@ -151,13 +161,16 @@ class RegisterPage(WebPage):
 class SignOnPage(WebPage):
     """Represent sign-on page."""
 
-    def __init__(self) -> None:
+    def __init__(self, driver: Driver) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._sp_locators: SP_Locators = SP_Locators
-        self._page: WebPage = BasePage(SignOnPageUrl())
+        self._page: WebPage = BasePage(driver, SignOnPageUrl())
 
-    def open(self, url: str = None) -> Driver:
-        return self._page.open(url)
+    def driver(self) -> None:
+        self._page.driver()
+
+    def open(self, url: str = None) -> None:
+        self._page.open(url)
 
     def close(self) -> None:
         self._page.close()
