@@ -13,6 +13,7 @@ from web_automation.locators import (
 )
 from web_automation.drivers import Driver, WebDriverOf
 from web_automation.browsers import ChromeBrowser
+from web_automation.urls import Url, HomePageUrl, RegisterPageUrl, SignOnPageUrl
 from web_automation.waits import WebDriverWaitOf
 
 
@@ -27,12 +28,12 @@ class WebPage(ABC):
 class BasePage(WebPage):
     """Represent base page."""
 
-    def __init__(self, url: str) -> None:
+    def __init__(self, url: Url) -> None:
 
         @lru_cache(typed=True)
         def open_page() -> Driver:
             driver: Driver = WebDriverOf(ChromeBrowser())
-            driver.get(url)
+            driver.get(url.get())
             return driver
 
         self._url: str = url
@@ -51,7 +52,7 @@ class HomePage(WebPage):
     def __init__(self) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._hp_locators: HP_Locators = HP_Locators
-        self._page: WebPage = BasePage('http://newtours.demoaut.com/mercurywelcome.php')
+        self._page: WebPage = BasePage(HomePageUrl())
 
     def open_page(self, url: str = None) -> Driver:
         return self._page.open_page(url)
@@ -78,7 +79,7 @@ class RegisterPage(WebPage):
     def __init__(self) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._rp_locators: RP_Locators = RP_Locators
-        self._page: WebPage = BasePage('http://newtours.demoaut.com/mercuryregister.php')
+        self._page: WebPage = BasePage(RegisterPageUrl())
 
     def open_page(self, url: str = None) -> Driver:
         return self._page.open_page(url)
@@ -140,7 +141,7 @@ class SignOnPage(WebPage):
     def __init__(self) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._sp_locators: SP_Locators = SP_Locators
-        self._page: WebPage = BasePage('http://newtours.demoaut.com/mercurysignon.php')
+        self._page: WebPage = BasePage(SignOnPageUrl())
 
     def open_page(self, url: str = None) -> Driver:
         return self._page.open_page(url)
