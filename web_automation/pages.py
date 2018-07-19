@@ -6,7 +6,9 @@ from web_automation.conditions import ExpectedCondition
 from web_automation.elements import Element
 from web_automation.handlers import HandlerBy, WebHandlerBy
 from web_automation.locators import (
-    HomePage as HP_Locators, RegistrationPage as RP_Locators, SingOnPage as SP_Locators
+    HomePage as HP_Locators,
+    RegistrationPage as RP_Locators,
+    SingOnPage as SP_Locators
 )
 from web_automation.drivers import Driver, WebDriverOf
 from web_automation.browsers import ChromeBrowser
@@ -17,7 +19,7 @@ class WebPage(ABC):
     """Abstraction of a web page."""
 
     @abstractmethod
-    def open_page(self, url: str = None) -> None:
+    def open_page(self, url: str = None) -> Driver:
         pass
 
 
@@ -50,8 +52,8 @@ class HomePage(WebPage):
         self._hp_locators: HP_Locators = HP_Locators
         self._page: WebPage = BasePage('http://newtours.demoaut.com/mercurywelcome.php')
 
-    def open_page(self, url: str = None) -> None:
-        self._page.open_page(url)
+    def open_page(self, url: str = None) -> Driver:
+        return self._page.open_page(url)
 
     def logo(self) -> Element:
         return self._page.driver().find_element(self._by.xpath(), self._hp_locators.logo)
@@ -77,8 +79,8 @@ class RegisterPage(WebPage):
         self._rp_locators: RP_Locators = RP_Locators
         self._page: WebPage = BasePage('http://newtours.demoaut.com/mercuryregister.php')
 
-    def open_page(self, url: str = None) -> None:
-        self._page.open_page(url)
+    def open_page(self, url: str = None) -> Driver:
+        return self._page.open_page(url)
 
     def regis_txt(self) -> Element:
         return self._page.driver().find_element(self._by.xpath(), self._rp_locators.regis_txt)
@@ -128,4 +130,37 @@ class RegisterPage(WebPage):
 
     def confirm_registration(self) -> Element:
         return WebDriverWaitOf(self._page.driver()).until_presence_of_element_located(
-            ExpectedCondition(self._by.xpath(), RP_Locators.thank_you))
+            ExpectedCondition(self._by.xpath(), self._rp_locators.thank_you))
+
+
+class SignOnPage(WebPage):
+    """Represent sign-on page."""
+
+    def __init__(self) -> None:
+        self._by: HandlerBy = WebHandlerBy()
+        self._sp_locators: SP_Locators = SP_Locators
+        self._page: WebPage = BasePage('http://newtours.demoaut.com/mercurysignon.php')
+
+    def open_page(self, url: str = None) -> Driver:
+        return self._page.open_page(url)
+
+    def user_name(self, value: str) -> None:
+        field: Element = self._page.driver().find_element(self._by.xpath(), self._sp_locators.user_name)
+        field.clear()
+        field.send_keys(value)
+
+    def password(self, value: str) -> None:
+        field: Element = self._page.driver().find_element(self._by.xpath(), self._sp_locators.password)
+        field.clear()
+        field.send_keys(value)
+
+    def text(self) -> Element:
+        return WebDriverWaitOf(self._page.driver()).until_presence_of_element_located(
+            ExpectedCondition(self._by.xpath(), self._sp_locators.txt))
+
+    def register_link(self) -> Element:
+        return WebDriverWaitOf(self._page.driver()).until_presence_of_element_located(
+            ExpectedCondition(self._by.xpath(), self._sp_locators.register_link))
+
+    def login(self) -> None:
+        self._page.driver().find_element(self._by.xpath(), self._sp_locators.login).click()

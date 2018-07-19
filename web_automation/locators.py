@@ -28,8 +28,8 @@ class RegistrationPage(object):
 class SingOnPage(object):
     """Represent sign on page web element locators."""
 
-    sign_on_user_name: str = "//input[@name='userName']"
-    sign_on_password: str = "//input[@name='password']"
-    sign_on_login: str = "//input[@name='login']"
-    sign_on_txt: str = "//*[contains(text(), 'Enter your user')]"
-    sign_on_register_link: str = "//a[@href='mercuryregister.php']"
+    user_name: str = "//input[@name='userName']"
+    password: str = "//input[@name='password']"
+    login: str = "//input[@name='login']"
+    txt: str = "//*[contains(text(), 'Enter your user')]"
+    register_link: str = "//*[starts-with(@href, 'mercuryregister.php')]"
