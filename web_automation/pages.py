@@ -21,7 +21,11 @@ class WebPage(ABC):
     """Abstraction of a web page."""
 
     @abstractmethod
-    def open_page(self, url: str = None) -> Driver:
+    def open(self, url: str = None) -> Driver:
+        pass
+
+    @abstractmethod
+    def close(self) -> None:
         pass
 
 
@@ -31,19 +35,22 @@ class BasePage(WebPage):
     def __init__(self, url: Url) -> None:
 
         @lru_cache(typed=True)
-        def open_page() -> Driver:
+        def _driver() -> Driver:
             driver: Driver = WebDriverOf(ChromeBrowser())
             driver.get(url.get())
             return driver
 
         self._url: str = url
-        self.driver: Callable[..., Driver] = open_page
+        self.driver: Callable[..., Driver] = _driver
 
-    def open_page(self, url: str = None) -> Driver:
+    def open(self, url: str = None) -> Driver:
         if not url:
             url: str = self._url
         self.driver().get(url)
         return self.driver()
+
+    def close(self) -> None:
+        return self.driver().close()
 
 
 class HomePage(WebPage):
@@ -54,8 +61,11 @@ class HomePage(WebPage):
         self._hp_locators: HP_Locators = HP_Locators
         self._page: WebPage = BasePage(HomePageUrl())
 
-    def open_page(self, url: str = None) -> Driver:
+    def open(self, url: str = None) -> Driver:
         return self._page.open_page(url)
+
+    def close(self) -> None:
+        self._page.close()
 
     def logo(self) -> Element:
         return self._page.driver().find_element(self._by.xpath(), self._hp_locators.logo)
@@ -81,8 +91,11 @@ class RegisterPage(WebPage):
         self._rp_locators: RP_Locators = RP_Locators
         self._page: WebPage = BasePage(RegisterPageUrl())
 
-    def open_page(self, url: str = None) -> Driver:
-        return self._page.open_page(url)
+    def open(self, url: str = None) -> Driver:
+        return self._page.open(url)
+
+    def close(self) -> None:
+        self._page.close()
 
     def regis_txt(self) -> Element:
         return self._page.driver().find_element(self._by.xpath(), self._rp_locators.regis_txt)
@@ -143,8 +156,11 @@ class SignOnPage(WebPage):
         self._sp_locators: SP_Locators = SP_Locators
         self._page: WebPage = BasePage(SignOnPageUrl())
 
-    def open_page(self, url: str = None) -> Driver:
-        return self._page.open_page(url)
+    def open(self, url: str = None) -> Driver:
+        return self._page.open(url)
+
+    def close(self) -> None:
+        self._page.close()
 
     def user_name(self, inp: SignOnPageInput) -> None:
         field: Element = self._page.driver().find_element(self._by.xpath(), self._sp_locators.user_name)
