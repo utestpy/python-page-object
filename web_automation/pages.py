@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from functools import lru_cache
 from typing import Callable
 from selenium.webdriver.support.select import Select
+from web_automation.browsers import WebBrowser
 from web_automation.conditions import ExpectedCondition
 from web_automation.elements import Element
 from web_automation.handlers import HandlerBy, WebHandlerBy
@@ -35,10 +36,11 @@ class WebPage(ABC):
 class BasePage(WebPage):
     """Represent base page."""
 
-    def __init__(self, driver: Driver, url: Url) -> None:
+    def __init__(self, browser: WebBrowser, url: Url) -> None:
 
-        @lru_cache(typed=True)
+        @lru_cache(maxsize=128)
         def _driver() -> Driver:
+            driver = browser.driver()
             driver.get(url.get())
             return driver
 
@@ -60,10 +62,10 @@ class BasePage(WebPage):
 class HomePage(WebPage):
     """Represent home page."""
 
-    def __init__(self, driver: Driver) -> None:
+    def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._hp_locators: HP_Locators = HP_Locators
-        self._page: WebPage = BasePage(driver, HomePageUrl())
+        self._page: WebPage = BasePage(browser, HomePageUrl())
 
     def driver(self) -> None:
         self._page.driver()
@@ -93,10 +95,10 @@ class HomePage(WebPage):
 class RegisterPage(WebPage):
     """Represent register page."""
 
-    def __init__(self, driver: Driver) -> None:
+    def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._rp_locators: RP_Locators = RP_Locators
-        self._page: WebPage = BasePage(driver, RegisterPageUrl())
+        self._page: WebPage = BasePage(browser, RegisterPageUrl())
 
     def driver(self) -> None:
         self._page.driver()
@@ -161,10 +163,10 @@ class RegisterPage(WebPage):
 class SignOnPage(WebPage):
     """Represent sign-on page."""
 
-    def __init__(self, driver: Driver) -> None:
+    def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._sp_locators: SP_Locators = SP_Locators
-        self._page: WebPage = BasePage(driver, SignOnPageUrl())
+        self._page: WebPage = BasePage(browser, SignOnPageUrl())
 
     def driver(self) -> None:
         self._page.driver()

@@ -1,13 +1,14 @@
 from abc import ABC, abstractmethod
-from selenium.webdriver import Chrome, Firefox, Safari
+from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
+from web_automation.drivers import Driver, WebDriverOf
 
 
 class WebBrowser(ABC):
     """Abstraction of a web browser."""
 
     @abstractmethod
-    def driver(self) -> WebDriver:
+    def driver(self) -> Driver:
         pass
 
     @abstractmethod
@@ -15,41 +16,40 @@ class WebBrowser(ABC):
         pass
 
 
-class ChromeBrowser(WebBrowser):
+class Chrome(WebBrowser):
     """Representation of a chrome web browser."""
 
     def __init__(self) -> None:
-        self._browser: WebDriver = Chrome()
+        self._chrome: WebDriver = webdriver.Chrome()
 
-    def driver(self) -> WebDriver:
-        return self._browser
+    def driver(self) -> Driver:
+        return WebDriverOf(self._chrome)
 
     def name(self) -> str:
         return 'Chrome'
 
 
-class FireFoxBrowser(WebBrowser):
+class FireFox(WebBrowser):
     """Representation of a firefox web browser."""
 
     def __init__(self) -> None:
-        self._browser: WebDriver = Firefox()
+        self._firefox: WebDriver = webdriver.Firefox()
 
-    def driver(self) -> WebDriver:
-        return self._browser
+    def driver(self) -> Driver:
+        return WebDriverOf(self._firefox)
 
     def name(self) -> str:
         return 'Firefox'
 
 
-class SafariBrowser(WebBrowser):
+class Safari(WebBrowser):
     """Representation of a safari web browser."""
 
     def __init__(self) -> None:
-        self._browser: WebDriver = Safari()
+        self._safari: WebDriver = webdriver.Safari()
 
-    def driver(self) -> WebDriver:
-        return self._browser
+    def driver(self) -> Driver:
+        return WebDriverOf(self._safari)
 
     def name(self) -> str:
         return 'Safari'
-
