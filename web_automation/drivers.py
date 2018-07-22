@@ -32,7 +32,7 @@ class Driver(ABC):
 
 
 class WebDriverOf(Driver):
-    """Chrome selenium web driver object."""
+    """Represent selenium web driver object."""
 
     def __init__(self, driver: Any) -> None:
         self._driver = driver
