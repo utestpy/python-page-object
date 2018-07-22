@@ -5,13 +5,6 @@ class RegisterPageInput(object):
     last_name: str = 'Yahello'
     phone: str = '+709-319-789'
     email: str = 'fancy_world@gmail.com'
-    country: str = 'Ukraine'
-    user_name: str = 'vyahello'
-    password: str = 'password'
-
-
-class SignOnPageInput(object):
-    """Represent sign on page input data."""
-
+    country: str = 'UKRAINE'
     user_name: str = 'vyahello'
     password: str = 'password'
