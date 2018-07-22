@@ -6,6 +6,10 @@ class Element(ABC):
     """Abstraction of a web element."""
 
     @abstractmethod
+    def element(self) -> webelement.WebElement:
+        pass
+
+    @abstractmethod
     def is_displayed(self) -> bool:
         pass
 
@@ -27,6 +31,9 @@ class WebElement(Element):
 
     def __init__(self, element: webelement.WebElement) -> None:
         self._element = element
+
+    def element(self) -> webelement.WebElement:
+        return self._element
 
     def is_displayed(self) -> bool:
         return self._element.is_displayed()
