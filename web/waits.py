@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Any
 from selenium.webdriver.support.wait import WebDriverWait
-from web_automation.conditions import Condition
-from web_automation.drivers import Driver
-from web_automation.elements import Element
+from web.conditions import Condition
+from web.drivers import Driver
+from web.elements import Element
 
 
 class Wait(ABC):

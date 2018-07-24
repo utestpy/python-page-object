@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any
-from web_automation.elements import Element, WebElement
+from web.elements import Element, WebElement
 
 
 class Driver(ABC):

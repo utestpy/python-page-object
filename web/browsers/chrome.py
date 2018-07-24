@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
-from web_automation.browsers import WebBrowser
-from web_automation.drivers import Driver, WebDriverOf
+from web.browsers import WebBrowser
+from web.drivers import Driver, WebDriverOf
 
 
 class Chrome(WebBrowser):

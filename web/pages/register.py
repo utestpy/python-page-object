@@ -1,24 +1,24 @@
 from selenium.webdriver.support.select import Select
-from web_automation.browsers import WebBrowser
-from web_automation.conditions import ExpectedCondition
-from web_automation.drivers import Driver
-from web_automation.elements import Element
-from web_automation.handlers import HandlerBy, WebHandlerBy
-from web_automation.input.register import RegisterPageInput
-from web_automation.locators.register import RegistrationPage as RP_Locators
-from web_automation.pages import WebPage
-from web_automation.pages.base import BasePage
-from web_automation.urls import RegisterPageUrl, Url
-from web_automation.waits import WebDriverWaitOf
+from web.browsers import WebBrowser
+from web.conditions import ExpectedCondition
+from web.drivers import Driver
+from web.elements import Element
+from web.handlers import HandlerBy, WebHandlerBy
+from web.input.register import RegisterPageInput
+from web.locators.register import RegistrationPage as RP_Locators
+from web.pages import Page
+from web.pages.base import BasePage
+from web.urls import RegisterPageUrl, Url
+from web.waits import WebDriverWaitOf
 
 
-class RegisterPage(WebPage):
+class RegisterPage(Page):
     """Represent register page."""
 
     def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._rp_locators: RP_Locators = RP_Locators
-        self._page: WebPage = BasePage(browser, RegisterPageUrl())
+        self._page: Page = BasePage(browser, RegisterPageUrl())
 
     def driver(self) -> Driver:
         return self._page.driver()

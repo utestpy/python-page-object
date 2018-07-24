@@ -1,12 +1,12 @@
 from functools import lru_cache
 from typing import Callable
-from web_automation.browsers import WebBrowser
-from web_automation.drivers import Driver
-from web_automation.pages import WebPage
-from web_automation.urls import Url
+from web.browsers import WebBrowser
+from web.drivers import Driver
+from web.pages import Page
+from web.urls import Url
 
 
-class BasePage(WebPage):
+class BasePage(Page):
     """Represent base page."""
 
     def __init__(self, browser: WebBrowser, url: Url) -> None:

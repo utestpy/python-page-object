@@ -1,23 +1,23 @@
-from web_automation.browsers import WebBrowser
-from web_automation.conditions import ExpectedCondition
-from web_automation.drivers import Driver
-from web_automation.elements import Element
-from web_automation.handlers import HandlerBy, WebHandlerBy
-from web_automation.input.sign_on import SignOnPageInput
-from web_automation.locators.sing_on import SingOnPage as SP_Locators
-from web_automation.pages import WebPage
-from web_automation.pages.base import BasePage
-from web_automation.urls import SignOnPageUrl, Url
-from web_automation.waits import WebDriverWaitOf
+from web.browsers import WebBrowser
+from web.conditions import ExpectedCondition
+from web.drivers import Driver
+from web.elements import Element
+from web.handlers import HandlerBy, WebHandlerBy
+from web.input.sign_on import SignOnPageInput
+from web.locators.sing_on import SingOnPage as SP_Locators
+from web.pages import Page
+from web.pages.base import BasePage
+from web.urls import SignOnPageUrl, Url
+from web.waits import WebDriverWaitOf
 
 
-class SignOnPage(WebPage):
+class SignOnPage(Page):
     """Represent sign-on page."""
 
     def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._sp_locators: SP_Locators = SP_Locators
-        self._page: WebPage = BasePage(browser, SignOnPageUrl())
+        self._page: Page = BasePage(browser, SignOnPageUrl())
 
     def driver(self) -> Driver:
         return self._page.driver()

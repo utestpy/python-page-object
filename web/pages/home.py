@@ -1,20 +1,20 @@
-from web_automation.browsers import WebBrowser
-from web_automation.drivers import Driver
-from web_automation.elements import Element
-from web_automation.handlers import HandlerBy, WebHandlerBy
-from web_automation.locators.home import HomePage as HP_Locators
-from web_automation.pages import WebPage
-from web_automation.pages.base import BasePage
-from web_automation.urls import HomePageUrl, Url
+from web.browsers import WebBrowser
+from web.drivers import Driver
+from web.elements import Element
+from web.handlers import HandlerBy, WebHandlerBy
+from web.locators.home import HomePage as HP_Locators
+from web.pages import Page
+from web.pages.base import BasePage
+from web.urls import HomePageUrl, Url
 
 
-class HomePage(WebPage):
+class HomePage(Page):
     """Represent home page."""
 
     def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
         self._hp_locators: HP_Locators = HP_Locators
-        self._page: WebPage = BasePage(browser, HomePageUrl())
+        self._page: Page = BasePage(browser, HomePageUrl())
 
     def driver(self) -> Driver:
         return self._page.driver()

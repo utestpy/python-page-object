@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
-from web_automation.drivers import Driver
-from web_automation.urls import Url
+from web.drivers import Driver
+from web.urls import Url
 
 
-class WebPage(ABC):
+class Page(ABC):
     """Abstraction of a web page."""
 
     @abstractmethod

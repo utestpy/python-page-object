@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from web_automation.drivers import Driver
+from web.drivers import Driver
 
 
 class WebBrowser(ABC):
