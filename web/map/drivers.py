@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Any
-from web.elements import Element, WebElement
+from web.map.elements import Element, WebElement
 
 
 class Driver(ABC):

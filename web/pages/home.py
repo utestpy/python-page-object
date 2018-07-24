@@ -1,11 +1,11 @@
 from web.browsers import WebBrowser
-from web.drivers import Driver
-from web.elements import Element
-from web.handlers import HandlerBy, WebHandlerBy
+from web.map.drivers import Driver
+from web.map.elements import Element
+from web.map.handlers import HandlerBy, WebHandlerBy
 from web.locators.home import HomePage as HP_Locators
 from web.pages import Page
 from web.pages.base import BasePage
-from web.urls import HomePageUrl, Url
+from web.map.urls import HomePageUrl, Url
 
 
 class HomePage(Page):

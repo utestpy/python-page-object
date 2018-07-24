@@ -1,9 +1,9 @@
 from functools import lru_cache
 from typing import Callable
 from web.browsers import WebBrowser
-from web.drivers import Driver
+from web.map.drivers import Driver
 from web.pages import Page
-from web.urls import Url
+from web.map.urls import Url
 
 
 class BasePage(Page):
