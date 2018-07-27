@@ -1,6 +1,6 @@
 from web.browsers import WebBrowser
 from web.map.conditions import ExpectedCondition
-from web.map.drivers import Driver
+from web.driver.driver import Driver
 from web.map.elements import Element
 from web.map.handlers import HandlerBy, WebHandlerBy
 from web.input.sign_on import SignOnPageInput
@@ -29,22 +29,22 @@ class SignOnPage(Page):
         self._page.close()
 
     def user_name(self, inp: SignOnPageInput) -> None:
-        field: Element = self._page.driver().find_element(self._by.xpath(), self._sp_locators.user_name)
+        field: Element = self.driver().find_element(self._by.xpath(), self._sp_locators.user_name)
         field.clear()
         field.send_keys(inp.user_name)
 
     def password(self, inp: SignOnPageInput) -> None:
-        field: Element = self._page.driver().find_element(self._by.xpath(), self._sp_locators.password)
+        field: Element = self.driver().find_element(self._by.xpath(), self._sp_locators.password)
         field.clear()
         field.send_keys(inp.password)
 
     def text(self) -> Element:
-        return WebDriverWaitOf(self._page.driver()).until_presence_of_element_located(
+        return WebDriverWaitOf(self.driver()).until_presence_of_element_located(
             ExpectedCondition(self._by.xpath(), self._sp_locators.txt))
 
     def register_link(self) -> Element:
-        return WebDriverWaitOf(self._page.driver()).until_presence_of_element_located(
+        return WebDriverWaitOf(self.driver()).until_presence_of_element_located(
             ExpectedCondition(self._by.xpath(), self._sp_locators.register_link))
 
     def login(self) -> None:
-        self._page.driver().find_element(self._by.xpath(), self._sp_locators.login).click()
+        self.driver().find_element(self._by.xpath(), self._sp_locators.login).click()

@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
 from web.browsers import WebBrowser
-from web.map.drivers import Driver, WebDriverOf
+from web.driver.web_driver import WebDriverOf
+from web.driver.driver import Driver
 
 
 class Safari(WebBrowser):

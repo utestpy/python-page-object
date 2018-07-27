@@ -1,7 +1,7 @@
 from functools import lru_cache
 from typing import Callable
 from web.browsers import WebBrowser
-from web.map.drivers import Driver
+from web.driver.driver import Driver
 from web.pages import Page
 from web.map.urls import Url
 

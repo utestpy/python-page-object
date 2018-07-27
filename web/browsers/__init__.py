@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from web.map.drivers import Driver
+from web.driver.driver import Driver
 
 
 class WebBrowser(ABC):

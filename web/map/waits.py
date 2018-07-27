@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import Any
 from selenium.webdriver.support.wait import WebDriverWait
 from web.map.conditions import Condition
-from web.map.drivers import Driver
+from web.driver.driver import Driver
 from web.map.elements import Element
 
 
