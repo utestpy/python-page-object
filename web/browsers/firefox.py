@@ -14,5 +14,8 @@ class FireFox(WebBrowser):
     def driver(self) -> Driver:
         return WebDriverOf(self._firefox)
 
+    def close(self) -> None:
+        self._firefox.close()
+
     def name(self) -> str:
         return 'Firefox'

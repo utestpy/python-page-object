@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-
 from web.driver.driver import Driver
 
 
@@ -8,6 +7,10 @@ class WebBrowser(ABC):
 
     @abstractmethod
     def driver(self) -> Driver:
+        pass
+
+    @abstractmethod
+    def close(self) -> None:
         pass
 
     @abstractmethod

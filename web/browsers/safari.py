@@ -14,5 +14,8 @@ class Safari(WebBrowser):
     def driver(self) -> Driver:
         return WebDriverOf(self._safari)
 
+    def close(self) -> None:
+        self._safari.close()
+
     def name(self) -> str:
         return 'Safari'
