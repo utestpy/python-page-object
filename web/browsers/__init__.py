@@ -16,3 +16,9 @@ class WebBrowser(ABC):
     @abstractmethod
     def name(self) -> str:
         pass
+
+
+class WebBrowserError(Exception):
+    """Represent web browser error."""
+
+    pass
