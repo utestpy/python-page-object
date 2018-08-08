@@ -1,27 +1,27 @@
-import pytest
+from tests.coverage import smoke
 from web.pages.home import HomePage
 
 
-@pytest.mark.smoke
+@smoke
 def test_home_page_logo(home_page: HomePage) -> None:
     assert home_page.logo().is_displayed()
 
 
-@pytest.mark.smoke
+@smoke
 def test_home_page_contact(home_page: HomePage) -> None:
     assert home_page.contact().is_displayed()
 
 
-@pytest.mark.smoke
+@smoke
 def test_home_page_sign_on(home_page: HomePage) -> None:
     assert home_page.sign_on().is_displayed()
 
 
-@pytest.mark.smoke
+@smoke
 def test_home_page_support(home_page: HomePage) -> None:
     assert home_page.support().is_displayed()
 
 
-@pytest.mark.smoke
+@smoke
 def test_home_page_register(home_page: HomePage) -> None:
     assert home_page.register().is_displayed()
