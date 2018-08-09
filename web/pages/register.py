@@ -29,13 +29,14 @@ class RegisterPage(Page):
     def close(self) -> None:
         self._page.close()
 
-    def regis_txt(self) -> Element:
+    def register_text(self) -> Element:
         return self.driver().find_element(self._by.xpath(), self._rp_locators.regis_txt)
 
-    def set_first_name(self, inp: RegisterPageInput) -> None:
+    def set_first_name(self, inp: RegisterPageInput) -> Element:
         first_name: Element = self.driver().find_element(self._by.xpath(), self._rp_locators.first_name)
         first_name.clear()
         first_name.send_keys(inp.first_name)
+        return first_name
 
     def set_last_name(self, inp: RegisterPageInput) -> None:
         last_name: Element = self.driver().find_element(self._by.xpath(), self._rp_locators.last_name)
@@ -75,5 +76,6 @@ class RegisterPage(Page):
         self.driver().find_element(self._by.xpath(), self._rp_locators.submit).click()
 
     def confirm_registration(self) -> Element:
-        return WebDriverWaitOf(self.driver()).until_presence_of_element_located(
+        return WebDriverWaitOf(
+            driver=self.driver(), timeout=15).until_presence_of_element_located(
             ExpectedCondition(self._by.xpath(), self._rp_locators.thank_you))

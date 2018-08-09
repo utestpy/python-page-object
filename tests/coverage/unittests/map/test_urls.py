@@ -1,4 +1,4 @@
-from tests.coverage import unittest
+from tests.coverage.markers import unittest
 from web.map.urls import Url
 
 _home: str = 'http://newtours.demoaut.com/mercurywelcome.php'

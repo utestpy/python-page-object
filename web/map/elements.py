@@ -6,6 +6,10 @@ class Element(ABC):
     """Abstraction of a web element."""
 
     @abstractmethod
+    def text(self, by: str, value: str) -> str:
+        pass
+
+    @abstractmethod
     def element(self) -> webelement.WebElement:
         pass
 
@@ -31,6 +35,9 @@ class WebElement(Element):
 
     def __init__(self, element: webelement.WebElement) -> None:
         self._element = element
+
+    def text(self, by: str, value: str) -> str:
+        return self._element.find_element(by, value).text
 
     def element(self) -> webelement.WebElement:
         return self._element

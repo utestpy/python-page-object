@@ -1,4 +1,4 @@
-from tests.coverage import smoke
+from tests.coverage.markers import smoke
 from web.pages.home import HomePage
 
 
