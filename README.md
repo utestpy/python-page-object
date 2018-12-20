@@ -5,15 +5,15 @@ Represent most popular OOD pattern for Web UI automation using python programmin
 From the root directory of your shell run next command
 - Smoke tests
 ```bash
-~ pytest -m smoke
+~ ./run-tests smoke
 ```
 - Unittest tests
 ```bash
-~ pytest -m unittest
+~ ./run-tests unittest
 ```
 - All tests
 ```bash
-~ pytest
+~ ./run-tests all
 ```
 
 ## Contributing
