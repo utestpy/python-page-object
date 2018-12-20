@@ -8,16 +8,13 @@ from web.browsers.safari import Safari
 
 @pytest.fixture
 def browser(request: SubRequest) -> Callable[[str], WebBrowser]:
-
     def browser_factory(name: str) -> WebBrowser:
-        request.addfinalizer(lambda: target.close())
-
+        request.addfinalizer(lambda: target.driver().close())
         if name == 'Chrome':
             target = Chrome()
             return target
-        elif name == 'Safari':
+        if name == 'Safari':
             target = Safari()
             return target
         raise WebBrowserError(f'Browser {name} is not supported!')
-
     return browser_factory

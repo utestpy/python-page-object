@@ -16,7 +16,6 @@ class BasePage(Page):
             driver: Driver = browser.driver()
             driver.set_page_load_timeout(10)
             driver.implicitly_wait(10)
-            driver.maximize_window()
             driver.get(url.get())
             return driver
 

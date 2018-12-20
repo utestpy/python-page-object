@@ -10,15 +10,10 @@ class WebBrowser(ABC):
         pass
 
     @abstractmethod
-    def close(self) -> None:
-        pass
-
-    @abstractmethod
     def name(self) -> str:
         pass
 
 
 class WebBrowserError(Exception):
     """Represent web browser error."""
-
     pass

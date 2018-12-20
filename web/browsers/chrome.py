@@ -14,8 +14,5 @@ class Chrome(WebBrowser):
     def driver(self) -> Driver:
         return WebDriverOf(self._chrome)
 
-    def close(self) -> None:
-        self._chrome.close()
-
     def name(self) -> str:
         return 'Chrome'
