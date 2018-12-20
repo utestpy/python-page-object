@@ -1,6 +1,6 @@
 from typing import Any
-from web.driver.driver import Driver
-from web.map.elements import Element, WebElement
+from lib.driver.driver import Driver
+from lib.map.elements import Element, WebElement
 
 
 class WebDriverOf(Driver):

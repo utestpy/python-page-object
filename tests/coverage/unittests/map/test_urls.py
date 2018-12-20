@@ -1,5 +1,5 @@
 from tests.coverage.markers import unittest
-from web.map.urls import Url
+from lib.map.urls import Url
 
 _home: str = 'http://newtours.demoaut.com/mercurywelcome.php'
 _register: str = 'http://newtours.demoaut.com/mercuryregister.php'

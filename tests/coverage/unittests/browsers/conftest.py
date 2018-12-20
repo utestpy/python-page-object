@@ -1,9 +1,9 @@
 from typing import Callable
 import pytest
 from _pytest.fixtures import SubRequest
-from web.browsers import WebBrowser, WebBrowserError
-from web.browsers.chrome import Chrome
-from web.browsers.safari import Safari
+from lib.browsers import WebBrowser, WebBrowserError
+from lib.browsers.chrome import Chrome
+from lib.browsers.safari import Safari
 
 
 @pytest.fixture

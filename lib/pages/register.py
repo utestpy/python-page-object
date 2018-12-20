@@ -1,15 +1,15 @@
 from selenium.webdriver.support.select import Select
-from web.browsers import WebBrowser
-from web.map.conditions import ExpectedCondition
-from web.driver.driver import Driver
-from web.map.elements import Element
-from web.map.handlers import HandlerBy, WebHandlerBy
-from web.input.register import RegisterPageInput
-from web.locators.register import RegistrationPage as RP_Locators
-from web.pages import Page
-from web.pages.base import BasePage
-from web.map.urls import RegisterPageUrl, Url
-from web.map.waits import WebDriverWaitOf
+from lib.browsers import WebBrowser
+from lib.map.conditions import ExpectedCondition
+from lib.driver.driver import Driver
+from lib.map.elements import Element
+from lib.map.handlers import HandlerBy, WebHandlerBy
+from lib.input.register import RegisterPageInput
+from lib.locators.register import RegistrationPage as RP_Locators
+from lib.pages import Page
+from lib.pages.base import BasePage
+from lib.map.urls import RegisterPageUrl, Url
+from lib.map.waits import WebDriverWaitOf
 
 
 class RegisterPage(Page):

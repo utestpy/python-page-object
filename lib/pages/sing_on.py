@@ -1,14 +1,14 @@
-from web.browsers import WebBrowser
-from web.map.conditions import ExpectedCondition
-from web.driver.driver import Driver
-from web.map.elements import Element
-from web.map.handlers import HandlerBy, WebHandlerBy
-from web.input.sign_on import SignOnPageInput
-from web.locators.sing_on import SingOnPage as SP_Locators
-from web.pages import Page
-from web.pages.base import BasePage
-from web.map.urls import SignOnPageUrl, Url
-from web.map.waits import WebDriverWaitOf
+from lib.browsers import WebBrowser
+from lib.map.conditions import ExpectedCondition
+from lib.driver.driver import Driver
+from lib.map.elements import Element
+from lib.map.handlers import HandlerBy, WebHandlerBy
+from lib.input.sign_on import SignOnPageInput
+from lib.locators.sing_on import SingOnPage as SP_Locators
+from lib.pages import Page
+from lib.pages.base import BasePage
+from lib.map.urls import SignOnPageUrl, Url
+from lib.map.waits import WebDriverWaitOf
 
 
 class SignOnPage(Page):
