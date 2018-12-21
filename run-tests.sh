@@ -23,9 +23,8 @@ function run_tests {
     [[ "${input}" == "all" ]] && all
     [[ "${input}" == "unittests" ]] && unittests
     [[ "${input}" == "smoke" ]] && smoke
-    [[ $# == 0 ]] && echo 'Please use either "unittests", "smoke" or "all" parameters to run tests!'
+    [[ $# == 0 ]] && echo 'Please use either "unittests", "smoke" or "all" parameters to run tests!' && exit 1
     clear_trash
-
 }
 
 run_tests $1
