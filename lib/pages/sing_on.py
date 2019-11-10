@@ -16,7 +16,7 @@ class SignOnPage(Page):
 
     def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
-        self._sp_locators: SP_Locators = SP_Locators
+        self._sp_locators: SP_Locators = SP_Locators()
         self._page: Page = BasePage(browser, SignOnPageUrl())
 
     def driver(self) -> Driver:
@@ -28,15 +28,15 @@ class SignOnPage(Page):
     def close(self) -> None:
         self._page.close()
 
-    def user_name(self, inp: SignOnPageInput) -> None:
+    def user_name(self, input_: SignOnPageInput) -> None:
         field: Element = self.driver().find_element(self._by.xpath(), self._sp_locators.user_name)
         field.clear()
-        field.send_keys(inp.user_name)
+        field.send_keys(input_.user_name)
 
-    def password(self, inp: SignOnPageInput) -> None:
+    def password(self, input_: SignOnPageInput) -> None:
         field: Element = self.driver().find_element(self._by.xpath(), self._sp_locators.password)
         field.clear()
-        field.send_keys(inp.password)
+        field.send_keys(input_.password)
 
     def text(self) -> Element:
         return WebDriverWaitOf(self.driver()).until_presence_of_element_located(

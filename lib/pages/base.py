@@ -19,7 +19,7 @@ class BasePage(Page):
             driver.get(url.get())
             return driver
 
-        self._url: str = url
+        self._url: Url = url
         self._driver: Callable[..., Driver] = _driver
 
     def driver(self) -> Driver:

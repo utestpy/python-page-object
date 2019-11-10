@@ -18,7 +18,7 @@ class Driver(ABC):
         pass
 
     @abstractmethod
-    def find_element(self, by: str, value: str) -> Element:
+    def find_element(self, by_: str, value: str) -> Element:
         pass
 
     @abstractmethod

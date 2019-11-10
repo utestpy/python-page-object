@@ -15,8 +15,8 @@ class WebDriverOf(Driver):
     def set_page_load_timeout(self, time_to_wait: int) -> None:
         self._driver.set_page_load_timeout(time_to_wait)
 
-    def find_element(self, by: str, locator: str) -> Element:
-        return WebElement(self._driver.find_element(by, locator))
+    def find_element(self, by_: str, locator: str) -> Element:
+        return WebElement(self._driver.find_element(by_, locator))
 
     def implicitly_wait(self, time_to_wait: int) -> None:
         self._driver.implicitly_wait(time_to_wait)

@@ -13,7 +13,7 @@ class HomePage(Page):
 
     def __init__(self, browser: WebBrowser) -> None:
         self._by: HandlerBy = WebHandlerBy()
-        self._hp_locators: HP_Locators = HP_Locators
+        self._hp_locators: HP_Locators = HP_Locators()
         self._page: Page = BasePage(browser, HomePageUrl())
 
     def driver(self) -> Driver:

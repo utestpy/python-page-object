@@ -1,6 +1,8 @@
 # Page object design pattern implementation in python
 Represent most popular OOD pattern for Web UI automation using python programming language.
 
+Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web app. Enjoy it!
+
 ## Tools
 > - `python 3.6+`
 > - `selenium` and `pom`
