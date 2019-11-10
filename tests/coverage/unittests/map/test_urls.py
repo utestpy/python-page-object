@@ -1,9 +1,9 @@
 from tests.coverage.markers import unittest
 from lib.map.urls import Url
 
-_home: str = 'http://newtours.demoaut.com/mercurywelcome.php'
-_register: str = 'http://newtours.demoaut.com/mercuryregister.php'
-_sign_on: str = 'http://newtours.demoaut.com/mercurysignon.php'
+_home: str = "http://newtours.demoaut.com/mercurywelcome.php"
+_register: str = "http://newtours.demoaut.com/mercuryregister.php"
+_sign_on: str = "http://newtours.demoaut.com/mercurysignon.php"
 
 
 @unittest

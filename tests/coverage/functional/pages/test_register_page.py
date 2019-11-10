@@ -11,11 +11,12 @@ def test_register_page_register_text(register_page: RegisterPage) -> None:
 
 
 @smoke
-def test_set_first_name(register_page: RegisterPage,
-                        register_page_input: RegisterPageInput,
-                        register_page_locator: RegistrationPage,
-                        handler_by: HandlerBy) -> None:
-
+def test_set_first_name(
+    register_page: RegisterPage,
+    register_page_input: RegisterPageInput,
+    register_page_locator: RegistrationPage,
+    handler_by: HandlerBy,
+) -> None:
     element = register_page.set_first_name(register_page_input)
     assert element.text(handler_by.xpath(), register_page_locator.first_name) == ""
 

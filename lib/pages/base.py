@@ -10,7 +10,6 @@ class BasePage(Page):
     """Represent base page."""
 
     def __init__(self, browser: WebBrowser, url: Url) -> None:
-
         @lru_cache(maxsize=128)
         def _driver() -> Driver:
             driver: Driver = browser.driver()

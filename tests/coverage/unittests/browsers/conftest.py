@@ -11,13 +11,14 @@ from lib.browsers.firefox import FireFox
 def browser(request: SubRequest) -> Callable[[str], WebBrowser]:
     def browser_factory(name: str) -> WebBrowser:
         request.addfinalizer(lambda: target.driver().close())
-        if name == 'Chrome':
+        if name == "Chrome":
             target = Chrome()
             return target
-        if name == 'Safari':
+        if name == "Safari":
             target = Safari()
             return target
-        if name == 'FireFox':
+        if name == "FireFox":
             target = FireFox()
-        raise WebBrowserError(f'Browser {name} is not supported!')
+        raise WebBrowserError(f"Browser {name} is not supported!")
+
     return browser_factory

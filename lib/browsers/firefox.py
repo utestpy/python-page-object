@@ -15,4 +15,4 @@ class FireFox(WebBrowser):
         return WebDriverOf(self._firefox)
 
     def name(self) -> str:
-        return 'Firefox'
+        return "Firefox"

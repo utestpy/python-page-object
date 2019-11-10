@@ -16,4 +16,5 @@ class WebBrowser(ABC):
 
 class WebBrowserError(Exception):
     """Represent web browser error."""
+
     pass

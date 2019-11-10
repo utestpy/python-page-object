@@ -15,4 +15,4 @@ class Chrome(WebBrowser):
         return WebDriverOf(self._chrome)
 
     def name(self) -> str:
-        return 'Chrome'
+        return "Chrome"

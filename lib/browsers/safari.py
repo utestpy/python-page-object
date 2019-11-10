@@ -15,4 +15,4 @@ class Safari(WebBrowser):
         return WebDriverOf(self._safari)
 
     def name(self) -> str:
-        return 'Safari'
+        return "Safari"

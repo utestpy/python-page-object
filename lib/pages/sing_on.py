@@ -40,11 +40,13 @@ class SignOnPage(Page):
 
     def text(self) -> Element:
         return WebDriverWaitOf(self.driver()).until_presence_of_element_located(
-            ExpectedCondition(self._by.xpath(), self._sp_locators.txt))
+            ExpectedCondition(self._by.xpath(), self._sp_locators.txt)
+        )
 
     def register_link(self) -> Element:
         return WebDriverWaitOf(self.driver()).until_presence_of_element_located(
-            ExpectedCondition(self._by.xpath(), self._sp_locators.register_link))
+            ExpectedCondition(self._by.xpath(), self._sp_locators.register_link)
+        )
 
     def login(self) -> None:
         self.driver().find_element(self._by.xpath(), self._sp_locators.login).click()

@@ -8,12 +8,13 @@ from lib.driver.driver import Driver
 class RemoteBrowser(WebBrowser):
     """Representation of a remote web browser."""
 
-    def __init__(self, remote_url: str = 'localhost:9515') -> None:
-        self._remote: WebDriver = Remote(command_executor=remote_url,
-                                         desired_capabilities=ChromeOptions().to_capabilities())
+    def __init__(self, remote_url: str = "localhost:9515") -> None:
+        self._remote: WebDriver = Remote(
+            command_executor=remote_url, desired_capabilities=ChromeOptions().to_capabilities()
+        )
 
     def driver(self) -> Driver:
         return WebDriverOf(self._remote)
 
     def name(self) -> str:
-        return 'Remote'
+        return "Remote"
