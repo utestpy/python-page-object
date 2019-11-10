@@ -1,2 +1,4 @@
-selenium
-pytest
+selenium==3.141.0
+pytest==5.2.2
+pytest-html==2.0.0
+pytest-clarity==0.2.0a1

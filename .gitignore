@@ -13,3 +13,6 @@ venv
 
 # python identifiers
 .python-version
+
+# pytest report
+test-report.html

@@ -4,6 +4,7 @@ from _pytest.fixtures import SubRequest
 from lib.browsers import WebBrowser, WebBrowserError
 from lib.browsers.chrome import Chrome
 from lib.browsers.safari import Safari
+from lib.browsers.firefox import FireFox
 
 
 @pytest.fixture
@@ -16,5 +17,7 @@ def browser(request: SubRequest) -> Callable[[str], WebBrowser]:
         if name == 'Safari':
             target = Safari()
             return target
+        if name == 'FireFox':
+            target = FireFox()
         raise WebBrowserError(f'Browser {name} is not supported!')
     return browser_factory

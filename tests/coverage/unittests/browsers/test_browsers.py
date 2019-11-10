@@ -6,13 +6,13 @@ from lib.browsers import WebBrowser, WebBrowserError
 
 @unittest
 @pytest.mark.parametrize("name", [
-    'Safari', 'Chrome'
+    'Chrome', 'FireFox', 'Safari'
 ])
 def test_browser_name(browser: Callable[[str], WebBrowser], name: str) -> None:
     assert browser(name).name() == name
 
 
 @unittest
-def test_browser_error():
+def test_browser_error() -> None:
     with pytest.raises(WebBrowserError):
         raise WebBrowserError('Raised WebBrowserError!')
