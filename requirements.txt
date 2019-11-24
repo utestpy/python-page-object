@@ -1,5 +1,8 @@
 selenium==3.141.0
 pytest==5.2.2
+pytest-cov==2.8.1
+pytest-metadata==1.8
 pytest-html==2.0.0
 pytest-clarity==0.2.0a1
 black==19.10b0
+coveralls==1.8.2
