@@ -21,7 +21,7 @@ From the root directory of your shell run following commands:
 ~ ./run-tests.sh unittest
 ```
 
-**Launch all set of tests**
+**Launch whole set of tests**
 ```bash
 ~ ./run-tests.sh all
 ```

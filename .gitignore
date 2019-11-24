@@ -16,3 +16,4 @@ venv
 
 # pytest report
 test-report.html
+assets/
