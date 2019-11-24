@@ -1,14 +1,18 @@
 #!/bin/bash
 
+FAILED_OUT="\033[0;31m"
+YELLOW_OUT="\033[1;33m"
+NONE_OUT="\033[0m"
 
-box() {
+
+function box() {
     echo "----------------------------------"
     echo "----- Running $1 tests -----------"
     echo "----------------------------------"
 }
 
 
-helper() {
+function helper {
     echo "Tool allows to simplify run of automated tests for blog project."
     echo ""
     echo "Available actions:"
@@ -21,14 +25,14 @@ helper() {
 }
 
 
-raise-error-message() {
-    echo "Invalid parameter <$1> is provided!"
-    echo "Please use <smoke> or <unittest> key as a flag. For more info please use <help> flag"
+function raise-error-message {
+    echo -e "Invalid ${FAILED_OUT}$1${NONE_OUT} parameter is provided!"
+    echo -e "Please use ${YELLOW_OUT}smoke${NONE_OUT} or ${YELLOW_OUT}unittest${NONE_OUT} key as a flag For more info please use ${YELLOW_OUT}help${NONE_OUT} flag."
     exit 1
 }
 
 
-clear-trash(){
+function clear-trash {
     local trash='.pytest_cache'
     [[ -d "$trash" ]] && echo "removing ${trash} testing trash" && rm -rf ${trash} && echo "environment is cleared"
 }
@@ -49,7 +53,7 @@ function all {
 }
 
 
-run-tests() {
+function run-tests {
     local arg=$1
     if [[ ${arg} == "smoke" ]] || [[ ${arg} == "unittest" ]];
         then box "${arg}" && pytest -m "${arg}"; clear-trash
