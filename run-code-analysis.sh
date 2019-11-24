@@ -9,7 +9,6 @@ NONE_OUT="\033[0m"
 
 # specifies a set of variables to declare files to be used for code assessment
 PROJECT_FILES="./"
-TESTS_FILES="tests"
 
 
 function store-failures {
@@ -45,8 +44,13 @@ function run-unittests {
 }
 
 
-function run-black-analysis() {
+function run-black-analysis {
     echo "Running black analysis ..." && ( black --check "${PROJECT_FILES}" )
+}
+
+
+function run-flake8-analysis {
+    echo "Running flake8 analysis ..." && ( flake8 "${PROJECT_FILES}" )
 }
 
 
@@ -55,6 +59,7 @@ function run-code-analysis {
     remove-pycache-trash
     run-unittests || store-failures "Unittests are failed!"
     run-black-analysis || store-failures "black analysis is failed!"
+    run-flake8-analysis || store-failures "flake8 analysis is failed!"
 
     if [[ ${#RESULT[@]} -ne 0 ]];
         then echo -e "${FAILED_OUT}Some errors occurred while analysing the code quality.${NONE_OUT}"
