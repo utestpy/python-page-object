@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from lib.driver.driver import Driver
-from lib.map.urls import Url
+from demo.driver.driver import Driver
+from demo.map.urls import Url
 
 
 class Page(ABC):

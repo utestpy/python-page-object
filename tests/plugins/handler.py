@@ -1,5 +1,5 @@
 import pytest
-from lib.map.handlers import HandlerBy, WebHandlerBy
+from demo.map.handlers import HandlerBy, WebHandlerBy
 
 
 @pytest.fixture(scope="module")

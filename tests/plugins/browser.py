@@ -1,6 +1,6 @@
 import pytest
 from _pytest.fixtures import SubRequest
-from lib.browsers.chrome import WebBrowser, Chrome
+from demo.browsers.chrome import WebBrowser, Chrome
 
 
 @pytest.fixture(scope="module")

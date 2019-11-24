@@ -1,5 +1,5 @@
 import pytest
-from lib.map.urls import HomePageUrl, RegisterPageUrl, SignOnPageUrl, Url
+from demo.map.urls import HomePageUrl, RegisterPageUrl, SignOnPageUrl, Url
 
 
 @pytest.fixture(scope="module")

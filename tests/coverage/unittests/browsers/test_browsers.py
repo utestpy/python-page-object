@@ -1,7 +1,7 @@
 from typing import Callable
 import pytest
 from tests.coverage.markers import unittest
-from lib.browsers import WebBrowser, WebBrowserError
+from demo.browsers import WebBrowser, WebBrowserError
 
 
 @unittest

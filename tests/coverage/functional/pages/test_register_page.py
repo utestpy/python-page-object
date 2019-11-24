@@ -1,8 +1,8 @@
 from tests.coverage.markers import smoke
-from lib.input.register import RegisterPageInput
-from lib.locators.register import RegistrationPage
-from lib.map.handlers import HandlerBy
-from lib.pages.register import RegisterPage
+from demo.input.register import RegisterPageInput
+from demo.locators.register import RegistrationPage
+from demo.map.handlers import HandlerBy
+from demo.pages.register import RegisterPage
 
 
 @smoke

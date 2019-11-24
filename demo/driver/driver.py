@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from lib.map.elements import Element
+from demo.map.elements import Element
 
 
 class Driver(ABC):

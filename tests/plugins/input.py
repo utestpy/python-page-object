@@ -1,5 +1,5 @@
 import pytest
-from lib.input.register import RegisterPageInput
+from demo.input.register import RegisterPageInput
 
 
 @pytest.fixture(scope="module")
