@@ -10,6 +10,9 @@
 > - `python 3.6+`
 > - `selenium` and `pom`
 > - `pytest`
+> - `travis CI`
+
+In addition code is `fully type annotated` and covered with static code analysis tools (`black`, `flake8`).
 
 ## Run automated tests
 From the root directory of your shell run following commands:
@@ -57,3 +60,4 @@ You can reach out me at:
 1. clone the repository
 2. configure Git for the first time after cloning with your `name` and `email`
 3. `pip install -r requirements.txt` to install all project dependencies
+4. `pip install -r requirements-dev.txt` to install all project development dependencies

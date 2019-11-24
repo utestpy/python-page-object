@@ -36,7 +36,7 @@ function remove-analysis-trash {
 function install-dependencies {
    echo "Installing python code analysis packages ..." \
    && ( pip install --no-cache-dir --upgrade pip ) \
-   && ( pip install --no-cache-dir -r requirements.txt )
+   && ( pip install --no-cache-dir -r requirements-dev.txt )
 }
 
 

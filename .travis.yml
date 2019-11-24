@@ -18,10 +18,8 @@ before_install:
   - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 install:
   - pip install --no-cache-dir --upgrade pip
-  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
 script:
-  - whereis google-chrome-stable
-  - whereis chromedriver
   - ./run-code-analysis.sh
 after_success:
   - coveralls
