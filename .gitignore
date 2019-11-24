@@ -17,3 +17,7 @@ venv
 # pytest report
 test-report.html
 assets/
+.coverage
+
+# browser trash
+geckodriver.log

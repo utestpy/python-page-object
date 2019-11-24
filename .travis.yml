@@ -1,0 +1,29 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+addons:
+  apt:
+    update: true
+before_install:
+  # Install dependencies
+  - sudo apt-get install -y chromium-browser
+  # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
+  - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+install:
+  - pip install --no-cache-dir --upgrade pip
+  - pip install -r requirements.txt
+script:
+  - whereis google-chrome-stable
+  - whereis chromedriver
+  - ./run-code-analysis.sh
+after_success:
+  - coveralls
+notifications:
+  email: false

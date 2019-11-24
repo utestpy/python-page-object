@@ -19,6 +19,7 @@ def browser(request: SubRequest) -> Callable[[str], WebBrowser]:
             return target
         if name == "FireFox":
             target = FireFox()
+            return target
         raise WebBrowserError(f"Browser {name} is not supported!")
 
     return browser_factory
