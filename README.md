@@ -44,6 +44,8 @@ After please open `test-report.html` file to see detailed testing report:
 
 ## Release History
 
+* 0.2.0
+    * Introduce travis CI
 * 0.1.0
     * Distribute initial version
 
