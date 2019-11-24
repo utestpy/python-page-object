@@ -12,7 +12,7 @@
 > - `pytest`
 > - `travis CI`
 
-In addition code is `fully type annotated` and covered with static code analysis tools (`black`, `flake8`).
+In addition code is `fully type annotated` and covered with static code analysis tools (`black`, `flake8` and `mypy`).
 
 ## Run automated tests
 From the root directory of your shell run following commands:
