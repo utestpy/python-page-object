@@ -1,5 +1,5 @@
 from functools import lru_cache
-from typing import Callable
+from typing import Callable, Optional
 from demo.browsers import WebBrowser
 from demo.driver.driver import Driver
 from demo.pages import Page
@@ -24,9 +24,9 @@ class BasePage(Page):
     def driver(self) -> Driver:
         return self._driver()
 
-    def open(self, url: Url = None) -> None:
+    def open(self, url: Optional[Url] = None) -> None:
         if not url:
-            url: Url = self._url
+            url = self._url
         self._driver().get(url.get())
 
     def close(self) -> None:

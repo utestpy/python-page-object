@@ -9,6 +9,7 @@ NONE_OUT="\033[0m"
 
 # specifies a set of variables to declare files to be used for code assessment
 PROJECT_FILES="./"
+LIB_FILES="demo"
 
 
 function store-failures {
@@ -54,12 +55,18 @@ function run-flake8-analysis {
 }
 
 
+function run-mypy-analysis() {
+    echo "Running mypy analysis ..." && mypy --package "${LIB_FILES}"
+}
+
+
 function run-code-analysis {
     echo "Running code analysis ..."
     remove-pycache-trash
     run-unittests || store-failures "Unittests are failed!"
     run-black-analysis || store-failures "black analysis is failed!"
     run-flake8-analysis || store-failures "flake8 analysis is failed!"
+    run-mypy-analysis || store-failures "mypy analysis is failed!"
 
     if [[ ${#RESULT[@]} -ne 0 ]];
         then echo -e "${FAILED_OUT}Some errors occurred while analysing the code quality.${NONE_OUT}"
