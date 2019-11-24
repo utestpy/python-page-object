@@ -3,6 +3,9 @@
 >
 > Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web app. Enjoy it!
 
+[![Build Status](https://travis-ci.org/vyahello/python-page-object.svg?branch=master)](https://travis-ci.org/vyahello/python-page-object)
+[![Coverage Status](https://coveralls.io/repos/github/vyahello/python-page-object/badge.svg?branch=master)](https://coveralls.io/github/vyahello/python-page-object?branch=master)
+
 **Tools**
 > - `python 3.6+`
 > - `selenium` and `pom`
