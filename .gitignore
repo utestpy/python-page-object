@@ -18,6 +18,7 @@ venv
 test-report.html
 assets/
 .coverage
+report/
 
 # browser trash
 geckodriver.log

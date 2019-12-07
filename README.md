@@ -32,8 +32,8 @@ From the root directory of your shell run following commands:
 ~ ./run-tests.sh all
 ```
 
-### Tests report sample
-Run a bunch of tests via following command:
+### Tests (html) report sample
+Run a bunch of tests (e.g smoke) via following command:
 ```bash
 ~ ./run-tests.sh smoke
 ```
@@ -42,8 +42,18 @@ After please open `test-report.html` file to see detailed testing report:
 
 ![Screenshot](image/report.png)
 
+### Generate allure report
+Please follow next instruction to generate allure report (mac OS example):
+1. Update java via `brew cask install adoptopenjdk`
+2. Install allure via `brew install allure`
+3. Generate allure project via `allure serve report`
+
+![Screenshot](image/allure.png)
+
 ## Release History
 
+* 0.3.0
+    * Introduce allure integration
 * 0.2.0
     * Introduce travis CI
     * Add static code analysis tools (`black`, `flake8` and `mypy`) along with unittests

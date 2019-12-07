@@ -6,3 +6,4 @@ black==19.10b0
 coveralls==1.8.2
 flake8==3.7.9
 mypy==0.740
+pdbpp==0.10.2
