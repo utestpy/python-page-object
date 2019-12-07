@@ -76,6 +76,6 @@ class RegisterPage(Page):
         self.driver().find_element(self._by.xpath(), self._rp_locators.submit).click()
 
     def confirm_registration(self) -> Element:
-        return WebDriverWaitOf(driver=self.driver(), timeout=15).until_presence_of_element_located(
+        return WebDriverWaitOf(driver=self.driver(), timeout=30).until_presence_of_element_located(
             ExpectedCondition(self._by.xpath(), self._rp_locators.thank_you)
         )
