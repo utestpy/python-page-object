@@ -1,8 +1,8 @@
 import pytest
-from demo.browsers import WebBrowser
-from demo.pages import Page
-from demo.pages.home import HomePage
-from demo.pages.register import RegisterPage
+from demoauto.browsers import WebBrowser
+from demoauto.pages import Page
+from demoauto.pages.home import HomePage
+from demoauto.pages.register import RegisterPage
 
 
 @pytest.fixture(scope="module")

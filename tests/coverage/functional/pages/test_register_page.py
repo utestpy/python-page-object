@@ -1,8 +1,8 @@
 from tests.coverage.markers import smoke
-from demo.input.register import RegisterPageInput
-from demo.locators.register import RegistrationPage
-from demo.map.handlers import HandlerBy
-from demo.pages.register import RegisterPage
+from demoauto.input.register import RegisterPageInput
+from demoauto.locators.register import RegistrationPage
+from demoauto.map.handlers import HandlerBy
+from demoauto.pages.register import RegisterPage
 
 
 @smoke
@@ -17,8 +17,10 @@ def test_set_first_name(
     register_page_locator: RegistrationPage,
     handler_by: HandlerBy,
 ) -> None:
-    element = register_page.set_first_name(register_page_input)
-    assert element.text(handler_by.xpath(), register_page_locator.first_name) == ""
+    assert (
+        register_page.set_first_name(register_page_input).text(handler_by.xpath(), register_page_locator.first_name)
+        == ""
+    )
 
 
 @smoke

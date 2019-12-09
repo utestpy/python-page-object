@@ -1,11 +1,11 @@
-from demo.browsers import WebBrowser
-from demo.driver.driver import Driver
-from demo.map.elements import Element
-from demo.map.handlers import HandlerBy, WebHandlerBy
-from demo.locators.home import HomePage as HP_Locators
-from demo.pages import Page
-from demo.pages.base import BasePage
-from demo.map.urls import HomePageUrl, Url
+from demoauto.browsers import WebBrowser
+from demoauto.driver.driver import Driver
+from demoauto.map.elements import Element
+from demoauto.map.handlers import HandlerBy, WebHandlerBy
+from demoauto.locators.home import HomePage as HP_Locators
+from demoauto.pages import Page
+from demoauto.pages.base import BasePage
+from demoauto.map.urls import HomePageUrl, Url
 
 
 class HomePage(Page):

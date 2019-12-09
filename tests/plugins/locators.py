@@ -1,5 +1,5 @@
 import pytest
-from demo.locators.register import RegistrationPage
+from demoauto.locators.register import RegistrationPage
 
 
 @pytest.fixture(scope="module")

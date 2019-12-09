@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
-from demo.browsers import WebBrowser
-from demo.driver.web_driver import WebDriverOf
-from demo.driver.driver import Driver
+from demoauto.browsers import WebBrowser
+from demoauto.driver.web_driver import WebDriverOf
+from demoauto.driver.driver import Driver
 
 
 class Chrome(WebBrowser):

@@ -1,6 +1,6 @@
 import pytest
 from tests.coverage.markers import unittest
-from demo.browsers import WebBrowserError
+from demoauto.browsers import WebBrowserError
 
 
 @unittest
