@@ -9,7 +9,7 @@ NONE_OUT="\033[0m"
 
 # specifies a set of variables to declare files to be used for code assessment
 PROJECT_FILES="./"
-LIB_FILES="demo"
+LIB_FILES="demoauto"
 
 
 function store-failures {
