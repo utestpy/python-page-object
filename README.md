@@ -8,6 +8,7 @@
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
+[![Hits-of-Code](https://hitsofcode.com/github/vyahello/python-page-object)](https://hitsofcode.com/view/github/vyahello/python-page-object)
 
 **Tools**
 > - `python 3.6+`
