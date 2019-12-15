@@ -1,14 +1,16 @@
-# Python page object model
-> Represent most popular OOD pattern for Web UI automation using python programming language.
->
-> Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web app. Enjoy it!
-
 [![Build Status](https://travis-ci.org/vyahello/python-page-object.svg?branch=master)](https://travis-ci.org/vyahello/python-page-object)
 [![Coverage Status](https://coveralls.io/repos/github/vyahello/python-page-object/badge.svg?branch=master)](https://coveralls.io/github/vyahello/python-page-object?branch=master)
+[![Forks](https://img.shields.io/github/forks/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/network/members)
+[![Stars](https://img.shields.io/github/stars/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/stargazers)
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
 [![Hits-of-Code](https://hitsofcode.com/github/vyahello/python-page-object)](https://hitsofcode.com/view/github/vyahello/python-page-object)
+
+# Python page object model
+> Represent most popular OOD pattern for Web UI automation using python programming language.
+>
+> Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web app. Enjoy it!
 
 **Tools**
 > - `python 3.6+`
