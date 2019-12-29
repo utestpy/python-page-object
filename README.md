@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/vyahello/python-page-object.svg?branch=master)](https://travis-ci.org/vyahello/python-page-object)
 [![Coverage Status](https://coveralls.io/repos/github/vyahello/python-page-object/badge.svg?branch=master)](https://coveralls.io/github/vyahello/python-page-object?branch=master)
+[![GitHub watchers](https://img.shields.io/github/watchers/vyahello/python-page-object.svg)](https://GitHub.com/vyahello/python-page-object/graphs/watchers/)
 [![Forks](https://img.shields.io/github/forks/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/network/members)
 [![Stars](https://img.shields.io/github/stars/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/stargazers)
 
@@ -21,7 +22,7 @@
 
 In addition code is `fully type annotated` and covered with static code analysis tools (`black`, `flake8` and `mypy`).
 
-## Run automated tests
+## Usage
 From the root directory of your shell run following commands:
 
 **Smoke tests**
