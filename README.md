@@ -3,9 +3,10 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/vyahello/python-page-object.svg)](https://GitHub.com/vyahello/python-page-object/graphs/watchers/)
 [![Forks](https://img.shields.io/github/forks/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/network/members)
 [![Stars](https://img.shields.io/github/stars/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/stargazers)
+[![GitHub contributors](https://img.shields.io/github/contributors/vyahello/python-page-object.svg)](https://GitHub.com/vyahello/python-page-object/graphs/contributors/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
 [![Hits-of-Code](https://hitsofcode.com/github/vyahello/python-page-object)](https://hitsofcode.com/view/github/vyahello/python-page-object)
 
 # Python page object model
@@ -27,23 +28,23 @@ From the root directory of your shell run following commands:
 
 **Smoke tests**
 ```bash
-~ ./run-tests.sh smoke
+➜ ./run-tests.sh smoke
 ```
 
 **Unit tests**
 ```bash
-~ ./run-tests.sh unittest
+➜ ./run-tests.sh unittest
 ```
 
 **Launch whole set of tests**
 ```bash
-~ ./run-tests.sh all
+➜ ./run-tests.sh all
 ```
 
 ### Tests (html) report sample
 Run a bunch of tests (e.g smoke) via following command:
 ```bash
-~ ./run-tests.sh smoke
+➜ ./run-tests.sh smoke
 ```
 
 After please open `test-report.html` file to see detailed testing report:
@@ -58,7 +59,9 @@ Please follow next instruction to generate allure report (mac OS example):
 
 ![Screenshot](image/allure.png)
 
-## Release History
+## Development notes
+
+### Release History
 
 * 0.3.0
     * Introduce allure integration
@@ -68,16 +71,16 @@ Please follow next instruction to generate allure report (mac OS example):
 * 0.1.0
     * Distribute initial version
 
-## Meta
+### Meta
 Author – Volodymyr Yahello vyahello@gmail.com
 
-Distributed under the `MIT` license. See [LICENSE](LICENSE.md) for more information.
+Distributed under the `GPL v3` license. See [LICENSE](LICENSE.md) for more information.
 
 You can reach out me at:
 * [https://github.com/vyahello](https://github.com/vyahello)
 * [https://www.linkedin.com/in/volodymyr-yahello-821746127](https://www.linkedin.com/in/volodymyr-yahello-821746127)
 
-## Contributing
+### Contributing
 1. clone the repository
 2. configure Git for the first time after cloning with your `name` and `email`
 3. `pip install -r requirements.txt` to install all project dependencies
