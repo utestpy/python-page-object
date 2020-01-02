@@ -5,7 +5,7 @@ YELLOW_OUT="\033[1;33m"
 NONE_OUT="\033[0m"
 
 
-function box() {
+function box {
     echo "----------------------------------"
     echo "----- Running $1 tests -----------"
     echo "----------------------------------"
@@ -13,7 +13,7 @@ function box() {
 
 
 function helper {
-    echo "Tool allows to simplify run of automated tests for blog project."
+    echo "Tool allows to simplify run of automated tests for POM sample project."
     echo ""
     echo "Available actions:"
     echo -e " - smoke\t\t run automated smoke tests"
@@ -27,7 +27,7 @@ function helper {
 
 function raise-error-message {
     echo -e "Invalid ${FAILED_OUT}$1${NONE_OUT} parameter is provided!"
-    echo -e "Please use ${YELLOW_OUT}smoke${NONE_OUT} or ${YELLOW_OUT}unittest${NONE_OUT} key as a flag For more info please use ${YELLOW_OUT}help${NONE_OUT} flag."
+    echo -e "Please use ${YELLOW_OUT}smoke${NONE_OUT} or ${YELLOW_OUT}unittest${NONE_OUT} or ${YELLOW_OUT}help${NONE_OUT} keys as a flag."
     exit 1
 }
 
@@ -39,17 +39,17 @@ function clear-trash {
 
 
 function unittests {
-    pytest -v -m unittest tests/
+    pytest -m unittest 
 }
 
 
 function smoke {
-    pytest -v -m smoke tests/
+    pytest -m smoke
 }
 
 
 function all {
-    pytest -v tests/
+    pytest
 }
 
 
