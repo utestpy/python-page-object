@@ -5,10 +5,12 @@ YELLOW_OUT="\033[1;33m"
 NONE_OUT="\033[0m"
 
 
-function box {
-    echo "----------------------------------"
-    echo "----- Running $1 tests -----------"
-    echo "----------------------------------"
+function pretty-output {
+      t="$@xxxx"
+      c=${replace:--}
+      echo -e ${t//?/$c}
+      echo -e "$c $@ $c"
+      echo -e ${t//?/$c}
 }
 
 
@@ -56,9 +58,9 @@ function all {
 function run-tests {
     local arg=$1
     if [[ ${arg} == "smoke" ]] || [[ ${arg} == "unittest" ]];
-        then box "${arg}" && pytest -m "${arg}"; clear-trash
+        then pretty-output "Running ${arg} suite" && pytest -m "${arg}"; clear-trash
     elif [[ ${arg} == "all" ]]
-        then box "${arg}" && pytest; clear-trash
+        then pretty-output "Running ${arg} suite" && pytest; clear-trash
     elif [[ $# -eq 0 ]] || [[ ${arg} == "--help" ]] || [[ ${arg} == "-h" ]]
         then helper
     else raise-error-message "${arg}"
