@@ -1,10 +1,9 @@
 import pytest
-from _pytest.fixtures import SubRequest
 from demoauto.browsers.chrome import WebBrowser, Chrome
 
 
-@pytest.fixture(scope="module")
-def browser(request: SubRequest) -> WebBrowser:
-    browser = Chrome()
-    request.addfinalizer(browser.driver().close)
-    return browser
+@pytest.fixture(scope="session")
+def browser() -> WebBrowser:
+    browser: WebBrowser = Chrome()
+    yield browser
+    browser.driver().close()

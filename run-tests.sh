@@ -29,7 +29,7 @@ function helper {
 
 function raise-error-message {
     echo -e "Invalid ${FAILED_OUT}$1${NONE_OUT} parameter is provided!"
-    echo -e "Please use ${YELLOW_OUT}smoke${NONE_OUT} or ${YELLOW_OUT}unittest${NONE_OUT} or ${YELLOW_OUT}help${NONE_OUT} keys as a flag."
+    echo -e "Please use ${YELLOW_OUT}smoke${NONE_OUT} or ${YELLOW_OUT}unit${NONE_OUT} or ${YELLOW_OUT}help${NONE_OUT} keys as a flag."
     exit 1
 }
 
@@ -40,8 +40,8 @@ function clear-trash {
 }
 
 
-function unittests {
-    pytest -m unittest 
+function unit {
+    pytest -m unit
 }
 
 
@@ -57,7 +57,7 @@ function all {
 
 function run-tests {
     local arg=$1
-    if [[ ${arg} == "smoke" ]] || [[ ${arg} == "unittest" ]];
+    if [[ ${arg} == "smoke" ]] || [[ ${arg} == "unit" ]];
         then pretty-output "Running ${arg} suite" && pytest -m "${arg}"; clear-trash
     elif [[ ${arg} == "all" ]]
         then pretty-output "Running ${arg} suite" && pytest; clear-trash

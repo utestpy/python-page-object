@@ -41,7 +41,7 @@ function install-dependencies {
 
 
 function run-unittests {
-    echo "Running unittests ..." && ( pytest -m unittest )
+    echo "Running unittests ..." && ( pytest -m unit )
 }
 
 

@@ -15,7 +15,6 @@
 > Represent most popular OOD pattern for Web UI automation using python programming language.
 >
 > Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web app. 
-> Enjoy it!
 
 **Tools**
 - python 3.6+
@@ -23,6 +22,10 @@
 - [pytest](https://pypi.org/project/pytest/)
 - [allure](https://docs.qameta.io/allure/) reporting
 - [travis CI](https://travis-ci.org/)
+- code analysis
+  - [mypy](http://mypy.readthedocs.io/en/latest)
+  - [black](https://black.readthedocs.io/en/stable/)
+  - [flake8](http://flake8.pycqa.org/en/latest/)
 
 In addition code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) and covered with static code analysis tools ([black](https://pypi.org/project/black/), [flake8](https://pypi.org/project/flake8/) and [mypy](https://pypi.org/project/mypy/)).
 
@@ -36,7 +39,7 @@ From the root directory of your shell run following commands:
 
 **Unit tests**
 ```bash
-➜ ./run-tests.sh unittest
+➜ ./run-tests.sh unit
 ```
 
 **Launch whole set of tests**

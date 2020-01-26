@@ -7,7 +7,7 @@ from demoauto.browsers.safari import Safari
 from demoauto.browsers.firefox import FireFox
 
 
-@pytest.fixture
+@pytest.fixture()
 def browser(request: SubRequest) -> Callable[[str], WebBrowser]:
     def browser_factory(name: str) -> WebBrowser:
         request.addfinalizer(lambda: target.driver().close())
