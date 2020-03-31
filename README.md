@@ -27,7 +27,7 @@
   - [black](https://black.readthedocs.io/en/stable/)
   - [flake8](http://flake8.pycqa.org/en/latest/)
 
-In addition code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) and covered with static code analysis tools ([black](https://pypi.org/project/black/), [flake8](https://pypi.org/project/flake8/) and [mypy](https://pypi.org/project/mypy/)).
+In addition code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
 
 ## Usage
 From the root directory of your shell run following commands:
