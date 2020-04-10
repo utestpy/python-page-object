@@ -5,11 +5,10 @@
 [![Forks](https://img.shields.io/github/forks/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/network/members)
 [![Stars](https://img.shields.io/github/stars/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/stargazers)
 [![GitHub contributors](https://img.shields.io/github/contributors/vyahello/python-page-object.svg)](https://GitHub.com/vyahello/python-page-object/graphs/contributors/)
-
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
 [![Hits-of-Code](https://hitsofcode.com/github/vyahello/python-page-object)](https://hitsofcode.com/view/github/vyahello/python-page-object)
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
-
+[![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
 
 # Python page object model
 > Represent most popular OOD pattern for Web UI automation using python programming language.
@@ -78,11 +77,12 @@ Please follow next instruction to generate allure report (mac OS example):
     * Distribute initial version
 
 ### Meta
-Author – Volodymyr Yahello vyahello@gmail.com
+Author – Volodymyr Yahello
 
 Distributed under the `GPL v3` license. See [LICENSE](LICENSE.md) for more information.
 
 You can reach out me at:
+* [vyahello@gmail.com](vyahello@gmail.com)
 * [https://github.com/vyahello](https://github.com/vyahello)
 * [https://www.linkedin.com/in/volodymyr-yahello-821746127](https://www.linkedin.com/in/volodymyr-yahello-821746127)
 
