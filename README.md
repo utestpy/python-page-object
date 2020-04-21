@@ -11,16 +11,16 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
 
 # Python page object model
-> Represent most popular OOD pattern for Web UI automation using python programming language.
+> Represent most popular OOD pattern for Web UI automation using python programming language (for learning reference mostly).
 >
 > Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web app. 
 
 **Tools**
-- python 3.6+
-- [selenium](https://selenium.dev/) and [pom](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html)
-- [pytest](https://pypi.org/project/pytest/)
+- python 3.6 | python 3.7 | python 3.8
+- [pytest](https://pypi.org/project/pytest/) framework
+- [selenium](https://selenium.dev/) library and [pom](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html) framework
 - [allure](https://docs.qameta.io/allure/) reporting
-- [travis CI](https://travis-ci.org/)
+- [travis](https://travis-ci.org/) CI
 - code analysis
   - [mypy](http://mypy.readthedocs.io/en/latest)
   - [black](https://black.readthedocs.io/en/stable/)
@@ -33,23 +33,23 @@ From the root directory of your shell run following commands:
 
 **Smoke tests**
 ```bash
-➜ ./run-tests.sh smoke
+./run-tests.sh smoke
 ```
 
 **Unit tests**
 ```bash
-➜ ./run-tests.sh unit
+./run-tests.sh unit
 ```
 
 **Launch whole set of tests**
 ```bash
-➜ ./run-tests.sh all
+./run-tests.sh all
 ```
 
 ### Tests (html) report sample
 Run a bunch of tests (e.g smoke) via following command:
 ```bash
-➜ ./run-tests.sh smoke
+./run-tests.sh smoke
 ```
 
 After please open `test-report.html` file to see detailed testing report:
@@ -77,7 +77,7 @@ Please follow next instruction to generate allure report (mac OS example):
     * Distribute initial version
 
 ### Meta
-Author – Volodymyr Yahello
+Author – _Volodymyr Yahello_
 
 Distributed under the `GPL v3` license. See [LICENSE](LICENSE.md) for more information.
 
