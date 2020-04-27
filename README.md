@@ -10,10 +10,10 @@
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
 
-# Python page object model
-> Represent most popular OOD pattern for Web UI automation using python programming language (for learning reference mostly).
+# Python page object model (PPOM)
+> Represent most popular OOD pattern for Web UI automation using python programming language (for learning reference only).
 >
-> Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web app. 
+> Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web application. 
 
 **Tools**
 - python 3.6 | python 3.7 | python 3.8
@@ -28,20 +28,20 @@
 
 In addition code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
 
-## Usage
+## Quick start
 From the root directory of your shell run following commands:
 
-**Smoke tests**
+- Smoke tests
 ```bash
 ./run-tests.sh smoke
 ```
 
-**Unit tests**
+- Unit tests
 ```bash
 ./run-tests.sh unit
 ```
 
-**Launch whole set of tests**
+- Whole suite
 ```bash
 ./run-tests.sh all
 ```
@@ -77,7 +77,7 @@ Please follow next instruction to generate allure report (mac OS example):
     * Distribute initial version
 
 ### Meta
-Author – _Volodymyr Yahello_
+Author – _Volodymyr Yahello_.
 
 Distributed under the `GPL v3` license. See [LICENSE](LICENSE.md) for more information.
 
