@@ -86,6 +86,7 @@ function main() {
         then install-dependencies || store-failures "Python packages installation is failed!";
     fi
     run-code-analysis
+    return 0
 }
 
 

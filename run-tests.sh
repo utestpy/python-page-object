@@ -65,6 +65,7 @@ function run-tests {
         then helper
     else raise-error-message "${arg}"
     fi
+    return 0
 }
 
 run-tests "$1"
