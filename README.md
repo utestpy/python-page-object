@@ -14,7 +14,7 @@
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
 
-# Python page object model (PPOM)
+# Python page object model (PyPOM)
 > Represent most popular OOD pattern for Web UI automation using python programming language (for learning reference only).
 >
 > Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web application. 
