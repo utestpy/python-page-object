@@ -20,7 +20,7 @@
 > Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web application. 
 
 **Tools**
-- python 3.6 | python 3.7 | python 3.8
+- python 3.6, 3.7, 3.8
 - [pytest](https://pypi.org/project/pytest/) framework
 - [selenium](https://selenium.dev/) library and [pom](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html) framework
 - [allure](https://docs.qameta.io/allure/) reporting
