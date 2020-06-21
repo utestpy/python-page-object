@@ -33,21 +33,20 @@
 In addition code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
 
 ## Quick start
-From the root directory of your shell run following commands:
+From the root directory of your shell run following command:
 
-- Smoke tests
 ```bash
-./run-tests.sh smoke
-```
+./run-tests.sh help
 
-- Unit tests
-```bash
-./run-tests.sh unit
-```
+Tool allows to simplify run of automated tests for POM sample project.
 
-- Whole suite
-```bash
-./run-tests.sh all
+Available actions:
+ - smoke                 run automated smoke tests
+ - unittest              run automated unittest tests
+ - all                   run all automated tests
+ - help                  display help
+
+Note:            help will be provided in case of no input parameters
 ```
 
 ### Tests (html) report sample
