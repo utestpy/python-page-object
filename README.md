@@ -13,6 +13,7 @@
 [![Hits-of-Code](https://hitsofcode.com/github/vyahello/python-page-object)](https://hitsofcode.com/view/github/vyahello/python-page-object)
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
+[![Docs](https://img.shields.io/badge/docs-github-orange)](https://https://vyahello.github.io/python-page-object)
 
 # Python page object model (PyPOM)
 > Represent most popular OOD pattern for Web UI automation using python programming language (for learning reference only).
