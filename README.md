@@ -4,34 +4,32 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Checked with flake8](https://img.shields.io/badge/flake8-checked-blue)](http://flake8.pycqa.org/)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
-[![GitHub version](https://badge.fury.io/gh/vyahello%2Fpython-page-object.svg)](https://github.com/vyahello/python-page-object/releases)
-[![GitHub watchers](https://img.shields.io/github/watchers/vyahello/python-page-object.svg)](https://GitHub.com/vyahello/python-page-object/graphs/watchers/)
-[![Forks](https://img.shields.io/github/forks/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/network/members)
-[![Stars](https://img.shields.io/github/stars/vyahello/python-page-object)](https://github.com/vyahello/python-page-object/stargazers)
-[![GitHub contributors](https://img.shields.io/github/contributors/vyahello/python-page-object.svg)](https://GitHub.com/vyahello/python-page-object/graphs/contributors/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
-[![Hits-of-Code](https://hitsofcode.com/github/vyahello/python-page-object)](https://hitsofcode.com/view/github/vyahello/python-page-object)
-[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
 [![Docs](https://img.shields.io/badge/docs-github-orange)](https://https://vyahello.github.io/python-page-object)
+[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 
 # Python page object model (PyPOM)
 > Represent most popular OOD pattern for Web UI automation using python programming language (for learning reference only).
 >
 > Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web application. 
 
-**Tools**
+## Tools
+
+### Production
 - python 3.6, 3.7, 3.8
 - [pytest](https://pypi.org/project/pytest/) framework
-- [selenium](https://selenium.dev/) library and [pom](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html) framework
+- [selenium](https://selenium.dev/) library
+- [pom](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html) framework
 - [allure](https://docs.qameta.io/allure/) reporting
 - [travis](https://travis-ci.org/) CI
-- code analysis
-  - [mypy](http://mypy.readthedocs.io/en/latest)
-  - [black](https://black.readthedocs.io/en/stable/)
-  - [flake8](http://flake8.pycqa.org/en/latest/)
 
-In addition code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
+### Development
+- [mypy](http://mypy.readthedocs.io/en/latest)
+- [black](https://black.readthedocs.io/en/stable/)
+- [flake8](http://flake8.pycqa.org/en/latest/)
+
+> In addition a source code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
 
 ## Quick start
 From the root directory of your shell run following command:
@@ -91,7 +89,13 @@ You can reach out me at:
 * [https://www.linkedin.com/in/volodymyr-yahello-821746127](https://www.linkedin.com/in/volodymyr-yahello-821746127)
 
 ### Contributing
-1. clone the repository
-2. configure Git for the first time after cloning with your `name` and `email`
+I would highly appreciate any contribution and support. If you are interested to add your ideas into project please follow next simple steps:
+
+1. Clone the repository
+2. Configure `git` for the first time after cloning with your `name` and `email`
 3. `pip install -r requirements.txt` to install all project dependencies
-4. `pip install -r requirements-dev.txt` to install all project development dependencies
+4. `pip install -r requirements-dev.txt` to install all development project dependencies
+5. Create your feature branch (`git checkout -b feature/fooBar`)
+6. Commit your changes (`git commit -am 'Add some fooBar'`)
+7. Push to the branch (`git push origin feature/fooBar`)
+8. Create a new Pull Request
