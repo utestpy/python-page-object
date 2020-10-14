@@ -54,7 +54,7 @@ Run a bunch of tests (e.g smoke) via following command:
 ./run-tests.sh smoke
 ```
 
-After please open `test-report.html` file to see detailed testing report:
+Then please open `test-report.html` file to see detailed testing report e.g:
 
 ![Screenshot](demoauto/image/report.png)
 
@@ -70,18 +70,12 @@ Please follow next instruction to generate allure report (mac OS example):
 
 ### Release History
 
-* 0.3.0
-    * Introduce allure integration
-* 0.2.0
-    * Introduce travis CI
-    * Add static code analysis tools (`black`, `flake8` and `mypy`) along with unittests
-* 0.1.0
-    * Distribute initial version
+Please check [changelog](CHANGELOG.md) file to get more details about actual versions and it's release notes.
 
 ### Meta
 Author – _Volodymyr Yahello_.
 
-Distributed under the `GPL v3` license. See [LICENSE](LICENSE.md) for more information.
+Distributed under the `GPL v3` license. See [license](LICENSE.md) for more information.
 
 You can reach out me at:
 * [vyahello@gmail.com](vyahello@gmail.com)
