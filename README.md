@@ -27,9 +27,9 @@
 - [travis](https://travis-ci.org/) CI
 
 ### Development
-- [mypy](http://mypy.readthedocs.io/en/latest)
-- [black](https://black.readthedocs.io/en/stable/)
-- [flake8](http://flake8.pycqa.org/en/latest/)
+- [mypy](http://mypy.readthedocs.io/en/latest) static type checker tool
+- [black](https://black.readthedocs.io/en/stable/) code formatter tool
+- [flake8](http://flake8.pycqa.org/en/latest/) code style tool
 
 > In addition a source code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
 
