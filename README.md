@@ -8,7 +8,7 @@
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
-[![Docs](https://img.shields.io/badge/docs-github-orange)](https://https://vyahello.github.io/python-page-object)
+[![Docs](https://img.shields.io/badge/docs-github-orange)](https://vyahello.github.io/python-page-object)
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 
 # Python page object model (PyPOM)
