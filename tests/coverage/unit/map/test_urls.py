@@ -1,9 +1,9 @@
 from tests.coverage.markers import unit
-from demoauto.map.urls import Url
+from demoauto.map.urls import Url, BASE_DEMO_URL
 
-_home: str = "http://newtours.demoaut.com/mercurywelcome.php"
-_register: str = "http://newtours.demoaut.com/mercuryregister.php"
-_sign_on: str = "http://newtours.demoaut.com/mercurysignon.php"
+_home: str = f"{BASE_DEMO_URL}/index.php"
+_register: str = f"{BASE_DEMO_URL}/register.php"
+_sign_on: str = f"{BASE_DEMO_URL}/login.php"
 
 
 @unit

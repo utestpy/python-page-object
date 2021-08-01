@@ -14,7 +14,7 @@
 # Python page object model (PyPOM)
 > Represent most popular OOD pattern for Web UI automation using python programming language (for learning reference only).
 >
-> Automated tests are demonstrated on http://newtours.demoaut.com/mercurywelcome.php web application. 
+> Automated tests are demonstrated on http://demo.guru99.com/test/newtours web application. 
 
 ## Tools
 

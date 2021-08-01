@@ -10,6 +10,6 @@ class RegistrationPage(object):
     user_name: str = "//input[@name='userName']"
     password: str = "//input[@name='password']"
     confirm_password: str = "//input[@name='confirmPassword']"
-    submit: str = "//input[@name='register']"
+    submit: str = "//input[@name='submit']"
     thank_you: str = "//*[contains(text(), 'Thank you for registering')]"
     post_user: str = "//*[contains(text(), 'Your user name is')]"

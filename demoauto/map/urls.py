@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod
 
 
+BASE_DEMO_URL = "http://demo.guru99.com/test/newtours"
+
+
 class Url(ABC):
     """Abstraction of a page url."""
 
@@ -23,7 +26,7 @@ class HomePageUrl(Url):
     """Represent home page url."""
 
     def __init__(self) -> None:
-        self._url: Url = PageUrl("http://newtours.demoaut.com/mercurywelcome.php")
+        self._url: Url = PageUrl(f"{BASE_DEMO_URL}/index.php")
 
     def get(self) -> str:
         return self._url.get()
@@ -33,7 +36,7 @@ class RegisterPageUrl(Url):
     """Represent register page url."""
 
     def __init__(self) -> None:
-        self._url: Url = PageUrl("http://newtours.demoaut.com/mercuryregister.php")
+        self._url: Url = PageUrl(f"{BASE_DEMO_URL}/register.php")
 
     def get(self) -> str:
         return self._url.get()
@@ -43,7 +46,7 @@ class SignOnPageUrl(Url):
     """Represent sign on page url."""
 
     def __init__(self) -> None:
-        self._url: Url = PageUrl("http://newtours.demoaut.com/mercurysignon.php")
+        self._url: Url = PageUrl(f"{BASE_DEMO_URL}/login.php")
 
     def get(self) -> str:
         return self._url.get()
