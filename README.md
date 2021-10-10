@@ -1,4 +1,4 @@
-![Screenshot](icon.png)
+![Screenshot](media/icon.png)
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Build Status](https://travis-ci.org/vyahello/python-page-object.svg?branch=master)](https://travis-ci.org/vyahello/python-page-object)
@@ -33,7 +33,10 @@
 
 > In addition a source code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
 
-## Quick start
+## Usage
+![Usage](media/usage.gif)
+
+### Quick start
 From the root directory of your shell run following command:
 
 ```bash
