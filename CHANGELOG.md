@@ -1,3 +1,11 @@
+* 0.3.1
+    * Create demo tests execution
+    * Move demoaut web site to a new base URL endpoin
+    * Remove redundant fake project image
+    * Create github actions
+    * Fix github docs link
+    * Add description for development tools
+    * Install coverage package within CI
 * 0.3.0
     * Introduce allure integration
 * 0.2.0
