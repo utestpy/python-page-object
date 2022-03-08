@@ -9,7 +9,12 @@ class Chrome(WebBrowser):
     """Representation of a chrome web browser."""
 
     def __init__(self) -> None:
-        self._chrome: WebDriver = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.add_argument("--start-maximized")
+        options.add_argument("--no-sandbox")
+        self._chrome: WebDriver = webdriver.Chrome(
+            desired_capabilities=options.to_capabilities()
+        )
 
     def driver(self) -> Driver:
         return WebDriverOf(self._chrome)

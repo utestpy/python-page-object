@@ -73,6 +73,21 @@ Please follow next instruction to generate allure report (mac OS example):
 
 ## Development notes
 
+### Selenium grid setup
+
+1. Install selenium grid from https://www.selenium.dev/downloads
+2. Run in standalone mode
+```bash
+java -jar selenium-server-4.0.0-alpha-7.jar standalone --port 9515
+pytest
+```
+3. Run in hub & node mode
+```bash
+java -jar selenium-server-4.0.0-alpha-7.jar hub --port 9515
+java -jar selenium-server-4.0.0-alpha-7.jar node --port 5555
+pytest
+```
+
 ### Release History
 
 Please check [changelog](CHANGELOG.md) file to get more details about actual versions and it's release notes.
