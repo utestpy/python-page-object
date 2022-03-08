@@ -10,7 +10,8 @@ class RemoteBrowser(WebBrowser):
 
     def __init__(self, remote_url: str = "localhost:9515") -> None:
         self._remote: WebDriver = Remote(
-            command_executor=remote_url, desired_capabilities=ChromeOptions().to_capabilities()
+            command_executor=remote_url,
+            desired_capabilities=ChromeOptions().to_capabilities(),
         )
 
     def driver(self) -> Driver:

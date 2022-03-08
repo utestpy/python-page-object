@@ -26,16 +26,26 @@ class HomePage(Page):
         self._page.close()
 
     def logo(self) -> Element:
-        return self.driver().find_element(self._by.xpath(), self._hp_locators.logo)
+        return self.driver().find_element(
+            self._by.xpath(), self._hp_locators.logo
+        )
 
     def contact(self) -> Element:
-        return self.driver().find_element(self._by.xpath(), self._hp_locators.contact)
+        return self.driver().find_element(
+            self._by.xpath(), self._hp_locators.contact
+        )
 
     def sign_on(self) -> Element:
-        return self.driver().find_element(self._by.xpath(), self._hp_locators.sing_on)
+        return self.driver().find_element(
+            self._by.xpath(), self._hp_locators.sing_on
+        )
 
     def support(self) -> Element:
-        return self.driver().find_element(self._by.xpath(), self._hp_locators.support)
+        return self.driver().find_element(
+            self._by.xpath(), self._hp_locators.support
+        )
 
     def register(self) -> Element:
-        return self.driver().find_element(self._by.xpath(), self._hp_locators.register)
+        return self.driver().find_element(
+            self._by.xpath(), self._hp_locators.register
+        )

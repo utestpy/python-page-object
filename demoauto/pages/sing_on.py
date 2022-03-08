@@ -29,12 +29,16 @@ class SignOnPage(Page):
         self._page.close()
 
     def user_name(self, input_: SignOnPageInput) -> None:
-        field: Element = self.driver().find_element(self._by.xpath(), self._sp_locators.user_name)
+        field: Element = self.driver().find_element(
+            self._by.xpath(), self._sp_locators.user_name
+        )
         field.clear()
         field.send_keys(input_.user_name)
 
     def password(self, input_: SignOnPageInput) -> None:
-        field: Element = self.driver().find_element(self._by.xpath(), self._sp_locators.password)
+        field: Element = self.driver().find_element(
+            self._by.xpath(), self._sp_locators.password
+        )
         field.clear()
         field.send_keys(input_.password)
 
@@ -49,4 +53,6 @@ class SignOnPage(Page):
         )
 
     def login(self) -> None:
-        self.driver().find_element(self._by.xpath(), self._sp_locators.login).click()
+        self.driver().find_element(
+            self._by.xpath(), self._sp_locators.login
+        ).click()

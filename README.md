@@ -7,7 +7,7 @@
 [![Checked with flake8](https://img.shields.io/badge/flake8-checked-blue)](http://flake8.pycqa.org/)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE.md)
-[![CodeFactor](https://www.codefactor.io/repository/github/vyahello/python-page-object/badge)](https://www.codefactor.io/repository/github/vyahello/python-page-object)
+[![CodeFactor](https://www.codefactor.io/repository/github/utestpy/python-page-object/badge)](https://www.codefactor.io/repository/github/utestpy/python-page-object)
 [![Docs](https://img.shields.io/badge/docs-github-orange)](https://vyahello.github.io/python-page-object)
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 
@@ -31,7 +31,7 @@
 - [black](https://black.readthedocs.io/en/stable/) code formatter tool
 - [flake8](http://flake8.pycqa.org/en/latest/) code style tool
 
-> In addition a source code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
+> In addition, a source code is **fully** [type annotated](https://docs.python.org/3/library/typing.html) ⭐
 
 ## Usage
 ![Usage](media/usage.gif)

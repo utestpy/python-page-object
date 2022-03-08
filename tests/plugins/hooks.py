@@ -13,4 +13,7 @@ def pytest_report_header(config: Config) -> List[str]:
     """Add information to test report header."""
 
     if config.option.verbose > 0:
-        return ["Project: Pytest Page Object Model", "Written by: Volodymyr Yahello"]
+        return [
+            "Project: Pytest Page Object Model",
+            "Written by: Volodymyr Yahello",
+        ]

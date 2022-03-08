@@ -18,13 +18,17 @@ def test_set_first_name(
     handler_by: HandlerBy,
 ) -> None:
     assert (
-        register_page.set_first_name(register_page_input).text(handler_by.xpath(), register_page_locator.first_name)
+        register_page.set_first_name(register_page_input).text(
+            handler_by.xpath(), register_page_locator.first_name
+        )
         == ""
     )
 
 
 @smoke
-def test_registration(register_page: RegisterPage, register_page_input: RegisterPageInput) -> None:
+def test_registration(
+    register_page: RegisterPage, register_page_input: RegisterPageInput
+) -> None:
     register_page.set_first_name(register_page_input)
     register_page.set_last_name(register_page_input)
     register_page.set_email(register_page_input)
