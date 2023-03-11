@@ -1,4 +1,4 @@
-class RegisterPageInput(object):
+class RegisterPageInput:
     """Represent register page input data."""
 
     first_name: str = "Volodymyr"

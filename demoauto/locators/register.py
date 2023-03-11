@@ -1,4 +1,4 @@
-class RegistrationPage(object):
+class RegistrationPage:
     """Represent registration page web element locators."""
 
     regis_txt: str = "//*[contains(text(), 'basic information')]"
