@@ -1,4 +1,4 @@
-class SingOnPage(object):
+class SingOnPage:
     """Represent sign on page web element locators."""
 
     user_name: str = "//input[@name='userName']"

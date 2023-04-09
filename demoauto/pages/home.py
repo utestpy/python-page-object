@@ -16,6 +16,7 @@ class HomePage(Page):
         self._hp_locators: HP_Locators = HP_Locators()
         self._page: Page = BasePage(browser, HomePageUrl())
 
+    @property
     def driver(self) -> Driver:
         return self._page.driver()
 
@@ -26,26 +27,26 @@ class HomePage(Page):
         self._page.close()
 
     def logo(self) -> Element:
-        return self.driver().find_element(
+        return self.driver.find_element(
             self._by.xpath(), self._hp_locators.logo
         )
 
     def contact(self) -> Element:
-        return self.driver().find_element(
+        return self.driver.find_element(
             self._by.xpath(), self._hp_locators.contact
         )
 
     def sign_on(self) -> Element:
-        return self.driver().find_element(
+        return self.driver.find_element(
             self._by.xpath(), self._hp_locators.sing_on
         )
 
     def support(self) -> Element:
-        return self.driver().find_element(
+        return self.driver.find_element(
             self._by.xpath(), self._hp_locators.support
         )
 
     def register(self) -> Element:
-        return self.driver().find_element(
+        return self.driver.find_element(
             self._by.xpath(), self._hp_locators.register
         )

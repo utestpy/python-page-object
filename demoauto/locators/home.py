@@ -1,4 +1,4 @@
-class HomePage(object):
+class HomePage:
     """Represent home page web element locators."""
 
     logo: str = "//img[@alt='Mercury Tours']"
