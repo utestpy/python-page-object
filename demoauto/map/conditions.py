@@ -16,8 +16,8 @@ class ExpectedCondition(Condition):
     """Represent expected condition of a web element."""
 
     def __init__(self, *locators: str) -> None:
-        self._presence_of_element_located: PresenceOfElement = PresenceOfElement(
-            locators
+        self._presence_of_element_located: PresenceOfElement = (
+            PresenceOfElement(locators)
         )
 
     def presence_of_element_located(self) -> PresenceOfElement:
