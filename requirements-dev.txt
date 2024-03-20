@@ -1,4 +1,4 @@
-black==23.3.0
+black==24.3.0
 coveralls==1.8.2
 coverage==4.5.4
 flake8==3.7.9
